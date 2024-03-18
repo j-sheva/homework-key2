@@ -4,27 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/reset-style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header id="home">
       <nav>
         <ul class="horizontal-list">
           <li class="nav-home">
-            <a href="#home">Home</a>
+            <a class="nav-link" href="#home">Home</a>
           </li>
           <li>
-            <a href="#about_me">About me</a>
+            <a class="nav-link" href="#about_me">About me</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#portfolio">Portfolio</a>
+            <a class="nav-link" href="#portfolio">Portfolio</a>
           </li>
           <li>
-            <a href="#contacts">Contacts</a>
+            <a class="nav-link" href="#contacts">Contacts</a>
           </li>
         </ul>
       </nav>
@@ -33,112 +40,198 @@
       <h1 class="mait-text">Denis Novik</h1>
       <img src="img/photox940.jpg" alt="Denis Novik" class="main-photo" />
       <section id="about_me">
-        <h2>About me</h2>
-        <p>
-          Hi, I'm Denis – UX/UI designer from Minsk. I'm interested in design
-          and everything connected with it.
-        </p>
-        <p>
-          I'm studying at courses "Web and mobile design interfaces" in
-          IT-Academy.
-        </p>
-        <p>Ready to implement excellent projects with wonderful people.</p>
+        <div class="about-div">
+          <h2>About me</h2>
+          <p class="p1">
+            Hi, I'm Denis – UX/UI designer from Minsk. <br />
+            I'm interested in design and everything connected with it.
+          </p>
+          <p class="p2">
+            I'm studying at courses "Web and mobile design <br />
+            interfaces" in IT-Academy.
+          </p>
+          <p class="p3">
+            Ready to implement excellent projects <br />
+            with wonderful people.
+          </p>
+        </div>
       </section>
 
       <section id="skills">
         <h2>Skills</h2>
-        <p>I work in such programs as</p>
+        <p class="p-skills">I work in such programs as</p>
 
         <div class="programs">
           <section class="program">
             <img src="img/Ps.svg" alt="Photoshop" class="ph" />
-            <h3>Adobe Photoshop</h3>
+            <h3>
+              Adobe <br />
+              Photoshop
+            </h3>
             <div class="rating">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star0">&#9733;</span>
-              <span class="star0">&#9733;</span>
-              <span class="star0">&#9733;</span>
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
             </div>
           </section>
 
           <section class="program">
             <img src="img/Ai.svg" alt="Illustrator" class="ph" />
-            <h3>Adobe Illustrator</h3>
+            <h3>
+              Adobe <br />
+              Illustrator
+            </h3>
             <div class="rating">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star0">&#9733;</span>
-              <span class="star0">&#9733;</span>
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
             </div>
           </section>
 
           <section class="program">
             <img src="img/Ae.svg" alt="After Effects" class="ph" />
-            <h3>Adobe After Effects</h3>
+            <h3>
+              Adobe <br />
+              After Effects
+            </h3>
             <div class="rating">
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star">&#9733;</span>
-              <span class="star0">&#9733;</span>
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img src="img/star-icon-grey.svg" alt="Empty star" class="star" />
+            </div>
+          </section>
+          <section class="program">
+            <img src="img/Figma.svg" alt="Figma" class="ph" />
+            <h3>
+              Figma <br />
+              <br />
+            </h3>
+            <div class="rating">
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
+              <img
+                src="img/star-icon-filled.svg"
+                alt="Filled star"
+                class="star"
+              />
             </div>
           </section>
         </div>
-        <section class="program">
-          <img src="img/Figma.svg" alt="Figma" class="ph" />
-          <h3>Figma</h3>
-          <div class="rating">
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-            <span class="star">&#9733;</span>
-          </div>
-        </section>
       </section>
       <section id="portfolio">
         <h2>Portfolio</h2>
-        <div>
+        <div class="portfolio-div1">
           <img
             src="img/Fashion-Store.jpg"
             alt="Online fashion store preview"
-            class="portfolio"
+            class="portfolio1"
           />
-          <a href="#">Online fashion store - Homepage</a>
+          <p>
+            <a href="#" class="portfolio-link"
+              >Online fashion store - <br />
+              Homepage</a
+            >
+          </p>
         </div>
-        <div>
+        <div class="portfolio-div2">
           <img
             src="img/reebok_web.jpg"
             alt="Reebok Store - Concept preview"
-            class="portfolio"
+            class="portfolio2"
           />
-          <a href="#">Reebok Store - Concept</a>
+          <p><a href="#" class="portfolio-link">Reebok Store - Concept</a></p>
         </div>
-        <div>
+        <div class="portfolio-div3">
           <img
             src="img/braun-landing.jpg"
             alt="Braun Landing Page - Concept"
-            class="portfolio"
+            class="portfolio3"
           />
-          <a href="#">Braun Landing Page - Concept</a>
+          <p>
+            <a href="#" class="portfolio-link">Braun Landing Page - Concept</a>
+          </p>
         </div>
       </section>
     </main>
     <footer id="contacts">
-      <h2>Contacts</h2>
+      <h2 class="h2-footer">Contacts</h2>
       <p>Want to know more or just chat?</p>
       <p>You are welcome!</p>
       <button>Send message</button>
       <br /><br /><br />
-      <div>
-        <span><img src="img/linkedin.svg" alt="Linkedin" /></span>
-        <span><img src="img/instagram.svg" alt="Instagram" /></span>
-        <span><img src="img/behance.svg" alt="Behance" /></span>
-        <span><img src="img/dribbble.svg" alt="Dribble" /></span>
+      <div class="sm">
+        <img src="img/linkedin.svg" alt="Linkedin" class="sm-icon" />
+        <img src="img/instagram.svg" alt="Instagram" class="sm-icon" />
+        <img src="img/behance.svg" alt="Behance" class="sm-icon" />
+        <img src="img/dribbble.svg" alt="Dribble" class="sm-icon" />
       </div>
-      <p>Like me on LinkedIn, Instagram, Behance, Dribble</p>
+      <p>
+        <small
+          >Like me on <br />
+          LinkedIn, Instagram, Behance, <br />
+          Dribble</small
+        >
+      </p>
     </footer>
   </body>
 </html>
