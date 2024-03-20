@@ -10,7 +10,7 @@ header {
   margin: 0 235px 0 235px;
 }
 
-.horizontal-list {
+.nav__ul {
   display: flex;
 }
 
@@ -18,7 +18,7 @@ li {
   margin-right: 40px;
 }
 
-.nav-link {
+.nav__link {
   color: #828282;
   text-decoration: none;
   font-family: 'Open sans', sans-serif;
@@ -27,12 +27,19 @@ li {
   letter-spacing: 0.02em;
 }
 
-.nav-link:hover {
+.nav__link:hover {
   color: #000000;
 }
 
-h1 {
-  padding: 12px 235px 46px 235px;
+.width {
+  max-width: 970px;
+  align-content: center;
+  padding-left: 235px;
+  padding-right: 235px;
+}
+
+.first-screen__header {
+  padding: 12px 0 46px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 65px;
@@ -40,19 +47,14 @@ h1 {
   text-align: left;
 }
 
-.main-photo {
-  padding: 0px 235px 0px 235px;
-}
-
 #about_me {
-  width: 970px;
   padding: 0 235px 0 235px;
   background-color: #f6f6f6;
 }
 
 .about-div {
   width: 480px;
-  padding: 98px 245px 100px 245px;
+  padding: 98px 0 100px 0;
 }
 
 h2 {
@@ -82,8 +84,7 @@ p {
 }
 
 #skills {
-  width: 970px;
-  padding: 100px 235px 100px 235px;
+  padding: 100px 0 100px 0;
 }
 
 .p-skills {
@@ -123,14 +124,13 @@ h3 {
 }
 
 #portfolio {
-  width: 970px;
-  padding: 98px 235px 0px 235px;
+  padding-top: 98px;
   background-color: #f6f6f6;
 }
 
 .portfolio-div1 {
   padding: 44px 0 70px 0;
-  width: 970px;
+  width: 100%;
 }
 
 .portfolio1 {
@@ -139,7 +139,6 @@ h3 {
 
 .portfolio-div2 {
   padding: 0px 0 70px 0;
-  width: 970px;
 }
 
 .portfolio2 {
@@ -147,7 +146,6 @@ h3 {
 }
 .portfolio-div3 {
   padding: 0px 0 100px 0;
-  width: 970px;
 }
 
 .portfolio3 {
@@ -161,8 +159,7 @@ a {
 }
 
 #contacts {
-  width: 970px;
-  padding: 98px 235px 100px 235px;
+  padding: 98px 0 100px 0;
 }
 
 .h2-footer {
