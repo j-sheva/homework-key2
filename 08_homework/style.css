@@ -98,9 +98,19 @@ input[type='checkbox']:checked + label::before {
 }
 
 input[type='checkbox']:checked + label {
-  text-decoration: line-through;
+  position: relative;
 
   color: #9b96ac;
+}
+
+input[type='checkbox']:checked + label::after {
+  content: '';
+  position: absolute;
+  left: 49px;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: #9b96ac;
 }
 
 .small::before {
