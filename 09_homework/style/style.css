@@ -141,16 +141,18 @@
   justify-content: center;
   align-items: center;
   padding-top: 70px;
+  padding-bottom: 74px;
 }
 
-.features__bg {
-  margin-top: -320px;
-  width: 100%;
+.features {
+  background: url(../img/bg.svg) center bottom no-repeat;
+  background-size: cover;
 }
 
 .footer__columns {
   display: flex;
   justify-content: space-between;
+  margin-top: 70px;
 }
 
 .footer__title {
@@ -201,4 +203,8 @@
 .footer__button {
   width: 180px;
   padding: 13px 39px 13px 39px;
+}
+
+.footer {
+  border-top: 1px solid rgba(188, 208, 229, 0.5);
 }
