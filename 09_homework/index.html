@@ -3,52 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/reset-style.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="fonts/Gotham-Bold.otf" />
-    <link rel="stylesheet" href="fonts/Montserrat-VariableFont_wght.ttf" />
+    <link rel="stylesheet" href="style/reset-style.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="font/Gotham-Bold.otf" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Productly</title>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <img src="img/Logo.svg" alt="logo" class="logo" />
-        <nav>
-          <ul>
-            <li class="nav-li">
-              <a href="">Product</a>
-            </li>
-            <li class="nav-li">
-              <a href="">Customers</a>
-            </li>
-            <li class="nav-li">
-              <a href="">Pricing</a>
-            </li>
-            <li class="nav-li">
-              <a href="">Resources</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="actions">
-          <button class="button1">Sign In</button>
-          <button class="button2">Sign Up</button>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <img src="img/Logo.svg" alt="logo" class="logo header__logo" />
+          <nav class="header__nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="">Product</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Customers</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Pricing</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="">Resources</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__actions">
+            <button class="header__button button header__button_white">
+              Sign In
+            </button>
+            <button class="header__button button">Sign Up</button>
+          </div>
         </div>
       </div>
     </header>
-    <main>
-      <section>
-        <div class="copy1">
-          <h1>The Design Thinking superpowers</h1>
-          <p class="p1">
-            Tools, tutorials, design and innovation experts, all in one place!
-            The most intuitive way to imagine your next user experience.
-          </p>
-          <button class="button-main">Get started</button>
-        </div>
+    <main class="main">
+      <section class="section">
+        <div class="hero__content container">
+          <div class="hero__copy">
+            <h1 class="hero__heading">The Design Thinking superpowers</h1>
+            <p class="hero__text">
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <button class="hero__button button">Get started</button>
+          </div>
 
-        <img src="img/img1.svg" alt="Happy people" class="img1" />
+          <img src="img/img1.svg" alt="Happy people" class="img1" />
+        </div>
+      </section>
+      <section class="features">
+        <div class="section__features container">
+          <h2 class="features__title title">
+            We design tools to unveil <br />
+            your superpowers
+          </h2>
+          <div class="features__items">
+            <div class="item">
+              <img class="item__icon" src="img/icon-0.svg" alt="cursor" />
+              <h3 class="item_title">First click tests</h3>
+              <p class="item__text text">
+                While most people enjoy casino gambling.
+              </p>
+            </div>
+            <div class="item">
+              <img class="item__icon" src="img/icon-1.svg" alt="wave" />
+              <h3 class="item_title">Design surveys</h3>
+              <p class="item__text text">
+                Sports betting, lottery and bingo playing for the fun.
+              </p>
+            </div>
+            <div class="item">
+              <img class="item__icon" src="img/icon-2.svg" alt="heart" />
+              <h3 class="item_title">Preference tests</h3>
+              <p class="item__text text">
+                The Myspace page defines the individual.
+              </p>
+            </div>
+            <div class="item">
+              <img class="item__icon" src="img/icon-3.svg" alt="hourglass" />
+              <h3 class="item_title">Five second tests</h3>
+              <p class="item__text text">
+                Personal choices and the overall personality of the person.
+              </p>
+            </div>
+          </div>
+          <div class="features__button">
+            <button class="button">Sign up Now</button>
+          </div>
+        </div>
+        <img class="features__bg" src="img/bg.svg" alt="gradient" />
       </section>
     </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__columns">
+          <div>
+            <img class="logo" src="img/Logo.svg" alt="logo" />
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__title">Quick Links</h3>
+            <p class="footer__text">About Us</p>
+            <p class="footer__text">Blog</p>
+            <p class="footer__text">Contact</p>
+            <p class="footer__text">FAQ</p>
+          </div>
+          <div class="footer__column">
+            <h3 class="footer__title">Legal Stuff</h3>
+            <p class="footer__text">Disclaimer</p>
+            <p class="footer__text">Financing</p>
+            <p class="footer__text">Privacy Policy</p>
+            <p class="footer__text">Terms of Service</p>
+          </div>
+          <div class="footer__form">
+            <h3 class="footer__title table-title">
+              Knowing you're always on <br />
+              the best energy deal.
+            </h3>
+            <form class="footer__action" action="#">
+              <input
+                class="footer__input"
+                type="number"
+                placeholder="  Enter your phone Number"
+              />
+              <button class="button footer__button">Sign up Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
