@@ -1,13 +1,3 @@
-p:after,
-h1:after {
-  content: ' \e034';
-  font-family: 'weathericons';
-  font-size: 27px;
-  font-weight: 400;
-  line-height: 39.06px;
-  text-align: left;
-}
-
 main {
   background-color: #3399cc;
   border: 25px solid #2b81ac;
@@ -59,6 +49,16 @@ p {
   text-align: left;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
+}
+
+.wi-city {
+  font-family: 'Weather Icons';
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 60.76px;
+  text-align: left;
+  vertical-align: middle;
+  margin-left: 11px;
 }
 
 .lisbon {
