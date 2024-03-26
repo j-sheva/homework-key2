@@ -91,7 +91,7 @@
   opacity: 0;
 }
 
-.section__text:hover {
+.section__element:hover .section__text {
   box-shadow: 0px 0px 30px 0px #00000080;
   background: linear-gradient(
     0deg,
@@ -101,7 +101,7 @@
   );
 }
 
-.section__text:hover ~ .section__overlay {
+.section__element:hover .section__overlay {
   opacity: 1;
 }
 
