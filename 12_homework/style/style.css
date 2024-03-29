@@ -48,7 +48,7 @@ main {
 }
 .section__chapter {
   text-transform: capitalize;
-
+  vertical-align: text-top;
   font-family: 'Farro', sans-serif;
   font-size: 20px;
   font-weight: 300;
