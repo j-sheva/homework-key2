@@ -10,12 +10,12 @@
   margin: 13px 0 13px 0;
 }
 main {
-  margin-top: 70px;
+  margin-top: 78px;
 }
 
 .header__left {
   display: flex;
-  gap: 50px;
+  gap: 54px;
   align-items: center;
 }
 
@@ -67,7 +67,13 @@ main {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
+}
+
+.section__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .section__text_underline {
