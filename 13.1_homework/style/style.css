@@ -1,0 +1,147 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3%;
+}
+
+.header__items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 13px 0 13px 0;
+}
+main {
+  margin-top: 78px;
+}
+
+.header__left {
+  display: flex;
+  gap: 54px;
+  align-items: center;
+}
+
+.header__language {
+  font-family: 'Tourney', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.nav__item {
+  font-family: 'Staatliches', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 27.5px;
+  letter-spacing: 0.03em;
+  text-align: left;
+}
+
+.section__title {
+  font-family: 'Francois One', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.section__chapter {
+  text-transform: capitalize;
+  vertical-align: text-top;
+  font-family: 'Farro', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+}
+.section__text {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: left;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 60px;
+}
+
+.section__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.section__text_underline {
+  text-decoration: underline;
+}
+
+.section__text_bold {
+  font-weight: 600;
+}
+
+.section__text_italic {
+  font-style: italic;
+}
+
+code {
+  background-color: #dadada;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+}
+
+main {
+  background-image: url(../image/bg-picture.svg);
+  background-repeat: no-repeat;
+  background-position: right 150px;
+  background-attachment: fixed;
+}
+
+.section__left {
+  padding-top: 83px;
+  width: 32%;
+}
+.sidebar__nav {
+  position: sticky;
+  top: 70px;
+}
+.section__right {
+  padding-top: 74px;
+  width: 65%;
+}
+
+.sidebar__link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.sidebar__item {
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #bdbdbd;
+}
+.sidebar__list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.section__line {
+  width: 100px;
+  height: 8px;
+  background-color: #000000;
+  color: #000000;
+  margin-bottom: 19px;
+}
