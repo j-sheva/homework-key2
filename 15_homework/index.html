@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web-forms</title>
+    <link rel="stylesheet" href="style/reset-style.css" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <div class="left-container container">
+          <h2 class="left-form__header header">Create an Account</h2>
+          <form action="#" method="get">
+            <div class="left-form form">
+              <div class="form__name fields">
+                <div class="form__input">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" />
+                </div>
+                <div class="form__input">
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" name="last-name" />
+                </div>
+              </div>
+              <div class="form__input">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" />
+                <p class="text email__text">
+                  We'll never share your email with anyone else.
+                </p>
+              </div>
+              <div class="form__radio">
+                <input type="radio" id="radio1" name="radio" />
+                <label for="radio1">Male</label>
+                <input type="radio" id="radio2" name="radio" />
+                <label for="radio2">Female</label>
+              </div>
+              <div class="form__location fields">
+                <div class="form__input">
+                  <label for="country">Country</label>
+
+                  <select name="country" id="country">
+                    <option value>Select</option>
+                    <option value="canada">Canada</option>
+                    <option value="italy">Italy</option>
+                    <option value="poland">Poland</option>
+                    <option value="spain">Spain</option>
+                    <option value="ukraine">Ukraine</option>
+                  </select>
+                </div>
+                <div class="form__input">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" />
+                </div>
+              </div>
+              <button class="left-form__button button" type="submit">
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <p class="left-form__text text">
+            By clicking the 'Sign Up' button, you confirm that you accept our
+            <br />
+            <a class="link" href="#">Terms of Use</a> and
+            <a class="link" href="#">Privacy Policy</a>
+          </p>
+          <p class="left-form__login text">
+            Have an account?
+            <a class="link login__link" href="#">Log In</a>
+          </p>
+        </div>
+        <div class="right-container container">
+          <h2 class="right-form__header header">Profile</h2>
+          <form action="#" method="get">
+            <div class="right-form form">
+              <div class="form__name fields">
+                <div class="form__input">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" />
+                </div>
+                <div class="form__input">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" />
+                </div>
+              </div>
+
+              <div class="form__location fields">
+                <div class="form__input">
+                  <label for="country">Country</label>
+
+                  <select name="country" id="country">
+                    <option value>Select</option>
+                    <option value="canada">Canada</option>
+                    <option value="italy">Italy</option>
+                    <option value="poland">Poland</option>
+                    <option value="spain">Spain</option>
+                    <option value="ukraine">Ukraine</option>
+                  </select>
+                </div>
+                <div class="form__input">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" />
+                </div>
+              </div>
+
+              <div class="form__number fields">
+                <div class="form__input">
+                  <label for="zip">Zip Code</label>
+                  <input type="number" id="zip" name="zip" />
+                </div>
+                <div class="form__input">
+                  <label for="phone">Phone Number</label>
+                  <input type="number" id="phone" name="phone" />
+                </div>
+              </div>
+              <button class="right-form__button button" type="submit">
+                Update
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
