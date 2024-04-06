@@ -112,6 +112,7 @@ select {
   border: 1px solid #e4e4e4;
   height: 38px;
   box-sizing: border-box;
+  padding-left: 10px;
 }
 
 select:hover {
@@ -130,4 +131,143 @@ input[type='radio'] {
   text-align: left;
   color: #bbbbbb;
   padding-left: 10px;
+}
+
+.left-form__text {
+  text-align: center;
+  padding-top: 22px;
+}
+
+.left-form__login {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.left-form__text_border {
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.login__link {
+  margin-left: 20px;
+}
+
+.form__image {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+.image-placeholder {
+  width: 80px;
+  height: 80px;
+}
+
+.form__image__actions {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 9px;
+  padding-top: 11px;
+}
+
+.form__image__button {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+}
+.form__input__image {
+  height: 30px;
+}
+.form__photo {
+  height: 30px;
+  box-sizing: border-box;
+  width: 138px;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.form__input__image {
+  opacity: 0;
+  z-index: 1;
+}
+.camera {
+  width: 16px;
+  padding-top: 6px;
+  padding-right: 8px;
+  position: absolute;
+  z-index: 0;
+}
+.trash {
+  display: block;
+}
+
+.form__radio__label {
+  display: inline-block;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 21px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.20000000298023224px;
+  text-align: left;
+  color: #545454;
+}
+
+/* Hide the browser's default radio button */
+.form__radio__label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+
+  border: 1px solid #e4e4e4;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.form__radio__label input:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.form__radio__label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.form__radio__label .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }

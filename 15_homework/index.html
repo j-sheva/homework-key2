@@ -31,23 +31,29 @@
                 </div>
               </div>
               <div class="form__input">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" />
+                <label for="email-left">E-mail</label>
+                <input type="email" id="email-left" name="email-left" />
                 <p class="text email__text">
                   We'll never share your email with anyone else.
                 </p>
               </div>
               <div class="form__radio">
-                <input type="radio" id="radio1" name="radio" />
-                <label for="radio1">Male</label>
-                <input type="radio" id="radio2" name="radio" />
-                <label for="radio2">Female</label>
+                <label class="form__radio__label"
+                  >Male
+                  <input type="radio" checked="checked" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="form__radio__label"
+                  >Female
+                  <input type="radio" name="radio" />
+                  <span class="checkmark"></span>
+                </label>
               </div>
               <div class="form__location fields">
                 <div class="form__input">
-                  <label for="country">Country</label>
+                  <label for="country-left">Country</label>
 
-                  <select name="country" id="country">
+                  <select name="country-left" id="country-left">
                     <option value>Select</option>
                     <option value="canada">Canada</option>
                     <option value="italy">Italy</option>
@@ -57,8 +63,8 @@
                   </select>
                 </div>
                 <div class="form__input">
-                  <label for="city">City</label>
-                  <input type="text" id="city" name="city" />
+                  <label for="city-left">City</label>
+                  <input type="text" id="city-left" name="city-left" />
                 </div>
               </div>
               <button class="left-form__button button" type="submit">
@@ -66,21 +72,51 @@
               </button>
             </div>
           </form>
-          <p class="left-form__text text">
-            By clicking the 'Sign Up' button, you confirm that you accept our
-            <br />
-            <a class="link" href="#">Terms of Use</a> and
-            <a class="link" href="#">Privacy Policy</a>
-          </p>
+          <div class="left-form__text_border">
+            <p class="left-form__text text">
+              By clicking the 'Sign Up' button, you confirm that you accept our
+              <br />
+              <a class="link" href="#">Terms of Use</a> and
+              <a class="link" href="#">Privacy Policy</a>
+            </p>
+          </div>
           <p class="left-form__login text">
             Have an account?
-            <a class="link login__link" href="#">Log In</a>
+            <a class="link login__link" href="#"> Log In</a>
           </p>
         </div>
         <div class="right-container container">
           <h2 class="right-form__header header">Profile</h2>
           <form action="#" method="get">
             <div class="right-form form">
+              <div class="form__image">
+                <img
+                  class="image-placeholder"
+                  src="image/📷 Image.png"
+                  alt="photo"
+                />
+                <div class="form__image__right">
+                  <div class="form__image__actions">
+                    <div class="form__photo">
+                      <input
+                        class="form__input__image"
+                        type="file"
+                        id="image"
+                        name="image"
+                      />
+                      <img
+                        class="camera"
+                        src="image/Photo Camera.svg"
+                        alt="camera"
+                      />
+                    </div>
+                    <button class="form__image__button">
+                      <img class="trash" src="image/Trash.svg" alt="trash" />
+                    </button>
+                  </div>
+                  <p class="text">Up to 1 MB (300x300 px)</p>
+                </div>
+              </div>
               <div class="form__name fields">
                 <div class="form__input">
                   <label for="name">Name</label>
