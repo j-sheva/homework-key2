@@ -1,0 +1,197 @@
+@import 'reset-style.scss';
+@import '_style.scss';
+@import '_fonts.scss';
+
+%photo-border {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-left: $border;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-top: 121px;
+  padding-bottom: 40px;
+
+  &__subtitle {
+    //styleName: subtitle;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $header-title-color;
+  }
+
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary-color;
+    padding-top: 15px;
+    padding-bottom: 32px;
+  }
+  &__divider {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.icon__divider {
+  width: 450px;
+  height: 20px;
+}
+.main {
+  display: flex;
+}
+
+.left,
+.right {
+  width: 100%;
+}
+
+.right {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  border-left: $border;
+
+  &__content {
+    margin-left: 85px;
+    margin-right: 70px;
+  }
+  &__title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 42.19px;
+    text-align: center;
+    color: $main-text-color;
+
+    margin-bottom: 30px;
+
+    &::after {
+      content: '';
+      display: block;
+
+      height: 1px;
+      width: 100px;
+      background-color: $primary-color;
+      margin: 0 auto;
+      margin-top: 22px;
+    }
+  }
+  &__subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: $main-text-color;
+  }
+  &__sm {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+  &__icon {
+    width: 30px;
+    height: 30px;
+  }
+  &__text {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__decore {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 25px;
+  }
+  &__icon__decore {
+    width: 50px;
+    height: 4px;
+  }
+  &__button {
+    width: 118px;
+    height: 24px;
+    padding: 4px 10px 5px 10px;
+    border: $border;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    color: $main-text-color;
+    text-transform: uppercase;
+    display: block;
+    margin: auto;
+  }
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  padding-top: 65px;
+
+  &__content {
+    width: 430px;
+    height: 430px;
+  }
+  &__wrapper {
+    position: relative;
+
+    &::before,
+    &::after {
+      @extend %photo-border;
+      top: 0;
+      border-top: $border;
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(90deg);
+    }
+  }
+  &__inner {
+    position: relative;
+    height: 430px;
+
+    &::before,
+    &::after {
+      @extend %photo-border;
+      bottom: 0;
+      border-bottom: $border;
+    }
+
+    &::after {
+      right: 0;
+      transform: rotate(-90deg);
+    }
+  }
+
+  &__photo {
+    width: 400px;
+    height: 400px;
+    margin: 15px;
+    border: $border;
+    box-sizing: border-box;
+  }
+}
