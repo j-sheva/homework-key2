@@ -123,14 +123,25 @@ input[type='radio'] {
   display: none;
 }
 
-#country {
+.select {
   font-size: 15px;
   font-weight: 400;
   line-height: 22px;
   letter-spacing: -0.20000000298023224px;
   text-align: left;
+  color: #545454;
+  background-image: url(../image/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+  cursor: pointer;
+  appearance: none;
+}
+
+option: {
+  color: #545454;
+}
+.select:invalid {
   color: #bbbbbb;
-  padding-left: 10px;
 }
 
 .left-form__text {
