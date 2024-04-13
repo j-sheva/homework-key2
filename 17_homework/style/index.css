@@ -172,12 +172,8 @@ table {
 }
 .header__divider {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .icon__divider {
@@ -186,8 +182,6 @@ table {
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -232,12 +226,8 @@ table {
   color: #666666;
 }
 .right__sm {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   gap: 5px;
   padding-top: 22px;
   padding-bottom: 50px;
@@ -255,12 +245,8 @@ table {
 }
 .right__decore {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 14px;
   padding-bottom: 25px;
 }
@@ -286,12 +272,8 @@ table {
 }
 
 .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 65px;
 }
 .left__content {
@@ -307,8 +289,7 @@ table {
 }
 .left__wrapper::after {
   right: 0;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .left__inner {
   position: relative;
@@ -320,14 +301,12 @@ table {
 }
 .left__inner::after {
   right: 0;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .left__photo {
   width: 400px;
   height: 400px;
   margin: 15px;
   border: 1px solid #ffcc00;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */

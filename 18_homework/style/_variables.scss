@@ -1,0 +1,54 @@
+$color-black: #000000;
+$color-white: #ffffff;
+$color-grey100: #f4f4f4;
+$color-grey500: #7b7b7b;
+$color-grey700: #565656;
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == 'phone' {
+    @media only screen and (max-width: 599px) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet' {
+    @media only screen and (min-width: 599px) and (max-width: 1023px) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+}
+
+// $mobile: 599px;
+// $tablet: 1023px;
+// $desktop: 1024px;
+
+// $breakpoints: (
+//   'large': (
+//     min-width: $desktop,
+//   ),
+//   'medium': (
+//     max-width: $tablet,
+//   ),
+//   'small': (
+//     max-width: $mobile,
+//   ),
+// );
+
+// @mixin responsive($size) {
+//   $guery: map-get($breakpoints, $size);
+//   @media #{$guery} {
+//     @content;
+//   }
+// }
+
+$max-width: 1200;
+
+@mixin font-pixel($min-size, $max-size) {
+  $adding-size: $max-size - $min-size;
+  $max-width: $max-width - 499;
+  font-size: calc(
+    #{$min-size + px} + #{$adding-size} * ((100vw - 499px) / #{$max-width})
+  );
+}

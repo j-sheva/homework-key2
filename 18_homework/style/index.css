@@ -1,0 +1,740 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display:wght@300..900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.header {
+  width: 100%;
+  height: 6.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .header {
+    height: 60px;
+  }
+}
+.header__logo {
+  width: 141.79px;
+  height: 100%;
+  fill: #000000;
+}
+.header__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5rem;
+}
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2.35rem;
+}
+.header__link {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.05rem;
+  letter-spacing: 0.3em;
+  text-align: left;
+  text-transform: uppercase;
+  color: #000000;
+}
+.header__item {
+  height: 22px;
+}
+.header__item:hover::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #000000;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+.header__search {
+  width: 1.063rem;
+  fill: #000000;
+}
+.header__checkbox {
+  display: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding-left: 2.125rem;
+  padding-right: 2.125rem;
+}
+@media only screen and (max-width: 599px) {
+  .container {
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 37.5rem;
+  background-image: url(../images/desktop/d-hero.webp);
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 599px) {
+  .hero {
+    height: 37.5rem;
+    background-image: url(../images/mobile/m-hero.webp) no-repeat;
+  }
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .hero {
+    height: 20rem;
+    background-image: url(../images/tablet/t-hero.webp) no-repeat;
+  }
+}
+.hero__title {
+  width: 100%;
+  padding-top: 6.25rem;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 4rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+@media only screen and (max-width: 599px) {
+  .hero__title {
+    padding-top: 4.375rem;
+    font-size: 1.875rem;
+    line-height: 3.125rem;
+  }
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .hero__title {
+    padding-top: 1.875rem;
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+  }
+}
+
+.blog {
+  padding-top: 5.625rem;
+  padding-bottom: 4.375rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .blog {
+    padding-top: 70px;
+  }
+}
+.blog__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 4rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  padding-bottom: 3.125rem;
+}
+.blog__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.875rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .blog__post {
+    gap: 1.4rem;
+  }
+}
+.blog__post1 {
+  padding-bottom: 2.9rem;
+}
+.blog__picture2 {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+.blog__post2 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .blog__post2 {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.article {
+  padding-top: 5.25rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .article {
+    padding-top: 0;
+  }
+}
+.article__title {
+  max-width: 28rem;
+  padding-top: 1.6rem;
+  padding-bottom: 0.6rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .article__title {
+    max-width: 340px;
+    padding-top: 1.5rem;
+  }
+}
+.article__date {
+  padding-bottom: 3rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .article__date {
+    padding-bottom: 2.3rem;
+  }
+}
+.article__text {
+  max-width: 28rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .article__text {
+    max-width: 340px;
+    height: 80px;
+    overflow: hidden;
+  }
+}
+
+.arrow {
+  width: 1.438rem;
+  height: 0.688rem;
+  outline: #7b7b7b;
+  padding-left: 0.8rem;
+}
+
+.subtitle {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.66rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #7b7b7b;
+}
+
+.title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 2.386rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+}
+
+.date {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.66rem;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #7b7b7b;
+}
+
+.text {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.66rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #565656;
+}
+
+.section {
+  padding-top: 1rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .section {
+    padding-top: 0rem;
+  }
+}
+.section__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2.7rem;
+}
+.section__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 46.48px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+}
+.section__action {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #7b7b7b;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .section__action {
+    display: flexbox;
+    width: 180px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+  }
+}
+.section__posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.9rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .section__posts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .post {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.2rem;
+  }
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .post__right {
+    max-width: 340px;
+  }
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .post__left {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.post__capture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .post__capture {
+    padding-top: 0;
+  }
+}
+.post__subtitle, .post__date {
+  font-size: 12px;
+}
+.post__title {
+  padding-bottom: 1rem;
+  font-size: 22px;
+  line-height: 36.52px;
+}
+.post__text {
+  padding-right: 1rem;
+}
+
+.popular {
+  padding-top: 7.2rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .popular {
+    padding-top: 4rem;
+  }
+}
+.popular__posts {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .popular__post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 340px;
+    gap: 0;
+  }
+}
+.popular__capture {
+  padding-top: 1rem;
+}
+.popular__title {
+  font-size: 24px;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+.popular__button {
+  width: 180px;
+  height: 46px;
+  background-color: #565656;
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26.56px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #ffffff;
+}
+.popular__button-wr {
+  padding-top: 54px;
+  padding-bottom: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .popular__button-wr {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 90px;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    padding-bottom: 58px;
+  }
+}
+.bottom__left {
+  width: 40%;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .bottom__left {
+    width: 100%;
+    padding-bottom: 42px;
+  }
+}
+.bottom__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 38.18px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+.bottom__link {
+  text-decoration: none;
+  color: #000000;
+}
+.bottom__text {
+  width: 40%;
+  font-family: "Lato", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #000000;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .bottom__text {
+    width: 85%;
+    text-align: right;
+    padding-right: 9%;
+  }
+}
+.bottom__arrow {
+  padding-top: 0.9rem;
+  width: 1.438rem;
+  height: 0.688rem;
+  outline: #7b7b7b;
+}
+
+.footer {
+  background-color: #f4f4f4;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+.footer__top {
+  padding-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .footer__top {
+    padding-top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.footer__title {
+  padding-bottom: 1.5rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .footer__title {
+    padding-bottom: 1.3rem;
+  }
+}
+.footer__text {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26.56px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #000000;
+  text-decoration: none;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .footer__text {
+    padding-bottom: 0.8rem;
+    display: block;
+    text-align: center;
+  }
+}
+.footer__copyright {
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 19.92px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding-top: 25px;
+}
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.4rem;
+}
+@media only screen and (min-width: 599px) and (max-width: 1023px) {
+  .footer__right {
+    padding-top: 2.2rem;
+    padding-bottom: 1rem;
+  }
+}
+.footer__sm {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  cursor: pointer;
+}
+.footer__sm__icon {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  fill: #565656;
+}
+.footer__sm:hover {
+  background-color: #565656;
+}
+.footer__sm:hover .footer__sm__icon {
+  fill: #ffffff;
+}
