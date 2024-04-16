@@ -417,6 +417,11 @@ body {
     padding-top: 0;
   }
 }
+@media only screen and (max-width: 599px) {
+  .article {
+    max-width: 18.75rem;
+  }
+}
 .article__title {
   max-width: 28rem;
   padding-top: 1.6rem;
@@ -951,6 +956,5 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-width: 18.75rem;
   }
 }
