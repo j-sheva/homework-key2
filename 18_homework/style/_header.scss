@@ -1,0 +1,166 @@
+.header {
+  width: 100%;
+  height: 6.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media-query('tablet') {
+    height: 3.75rem;
+  }
+
+  // &__checkbox {
+  //   display: none;
+  // }
+
+  &__logo {
+    width: 8.8619rem;
+
+    height: 1.125rem;
+    fill: $color-black;
+    @include media-query('tablet') {
+      width: 9.0625rem;
+      height: 0.8125rem;
+    }
+  }
+  &__right {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 5rem;
+  }
+  &__nav {
+    display: flex;
+    gap: 2.35rem;
+    @include media-query('tablet') {
+      display: none;
+      position: fixed;
+      flex-direction: column;
+      height: 100%;
+      width: 12.5rem;
+      top: 0;
+      right: 0;
+      background-color: $color-white;
+      padding-top: 5rem;
+      padding-left: 2rem;
+      &.open {
+        display: flex;
+      }
+      &.open .header__item:hover:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.05rem;
+    letter-spacing: 0.3em;
+    text-align: left;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+  &__item {
+    height: 1.375rem;
+
+    &:hover::after {
+      content: '';
+      display: block;
+      width: 2.5rem;
+      height: 0.0625rem;
+      background-color: $color-black;
+      margin: 0 auto;
+      margin-top: 0.3125rem;
+    }
+  }
+  &__icons {
+    display: flex;
+    align-items: center;
+
+    @include media-query('tablet') {
+      gap: 1.25rem;
+    }
+  }
+  &__search {
+    width: 1.063rem;
+    height: 1.063rem;
+    fill: $color-black;
+
+    @include media-query('tablet') {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    @include media-query('tablet') {
+      display: block;
+      cursor: pointer;
+
+      &.active .header__bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active .header__bar:nth-child(1) {
+        transform: translateY(12px) rotate(45deg);
+      }
+
+      &.active .header__bar:nth-child(3) {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+    }
+  }
+
+  &__bar {
+    display: block;
+    width: 2.125rem;
+    height: 0.125rem;
+    margin: 0.625rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+}
+
+//   &__burger {
+//     display: none;
+
+//     @include media-query('tablet') {
+//       display: inline-block;
+//       position: relative;
+
+//       &__label {
+//         display: inline-block;
+//         width: 34px;
+//         height: 20px;
+//         &::before,
+//         &::after {
+//           content: '';
+//           display: inline-block;
+//           width: 34px;
+//           height: 2px;
+//           background-color: $color-black;
+//           position: absolute;
+//         }
+
+//         &::after {
+//           content: '';
+//           bottom: 0;
+//         }
+//       }
+//       &__span {
+//         display: inline-block;
+//         width: 34px;
+//         height: 2px;
+//         position: absolute;
+//         top: 45%;
+//         right: 0;
+//         background-color: $color-black;
+//       }
+//     }
+//   }

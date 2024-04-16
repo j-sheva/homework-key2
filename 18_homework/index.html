@@ -18,14 +18,8 @@
           </div>
 
           <div class="header__right">
-            <input type="checkbox" id="checkbox" class="header__checkbox" />
-            <div class="header__burger">
-              <label for="checkbox">
-                <span></span>
-                <span></span>
-                <span></span>
-              </label>
-            </div>
+            <!-- <input type="checkbox" id="checkbox" class="header__checkbox" /> -->
+
             <ul class="header__nav">
               <li class="header__item">
                 <a class="header__link" href="#">Home</a>
@@ -43,12 +37,24 @@
                 <a class="header__link" href="#">Contact</a>
               </li>
             </ul>
-            <div class="nav__search">
-              <a href="#">
-                <svg class="icon header__search">
-                  <use xlink:href="svg/sprite.svg#search"></use>
-                </svg>
-              </a>
+            <div class="header__icons">
+              <div class="nav__search">
+                <a href="#">
+                  <svg class="icon header__search">
+                    <use xlink:href="svg/sprite.svg#search"></use>
+                  </svg>
+                </a>
+              </div>
+              <div class="header__hamburger">
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+                <span class="header__bar"></span>
+              </div>
+              <!-- <div class="header__burger">
+                <label class="header__burger__label" for="checkbox">
+                  <span class="header__burger__span"></span>
+                </label>
+              </div> -->
             </div>
           </div>
         </div>
@@ -344,5 +350,13 @@
         </p>
       </div>
     </footer>
+    <script>
+      document
+        .querySelector('.header__hamburger')
+        .addEventListener('click', function () {
+          this.classList.toggle('active');
+          document.querySelector('.header__nav').classList.toggle('open');
+        });
+    </script>
   </body>
 </html>

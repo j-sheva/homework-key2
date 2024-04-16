@@ -1,0 +1,57 @@
+.popular {
+  padding-top: 7.2rem;
+  @include media-query('tablet') {
+    padding-top: 4rem;
+  }
+  &__posts {
+    flex-direction: row;
+    @include media-query('phone') {
+      flex-direction: column;
+    }
+  }
+
+  &__post {
+    @include media-query('tablet') {
+      flex-direction: column;
+      max-width: 21.25rem;
+      gap: 0;
+    }
+  }
+
+  &__capture {
+    padding-top: 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+  }
+  &__button {
+    width: 11.25rem;
+    height: 2.875rem;
+    background-color: $color-grey700;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.66rem;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $color-white;
+
+    &-wr {
+      padding-top: 3.375rem;
+      padding-bottom: 5.625rem;
+      display: flex;
+      justify-content: center;
+      @include media-query('tablet') {
+        padding-top: 4rem;
+        padding-bottom: 4.375rem;
+      }
+      @include media-query('phone') {
+        padding-top: 7rem;
+      }
+    }
+  }
+}

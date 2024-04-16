@@ -10,7 +10,7 @@ $color-grey700: #565656;
       @content;
     }
   } @else if $breakpoint == 'tablet' {
-    @media only screen and (min-width: 599px) and (max-width: 1023px) {
+    @media only screen and (max-width: 1023px) {
       @content;
     }
   } @else if $breakpoint == 'desktop' {
@@ -43,12 +43,12 @@ $color-grey700: #565656;
 //   }
 // }
 
-$max-width: 1200;
+// $max-width: 1200;
 
-@mixin font-pixel($min-size, $max-size) {
-  $adding-size: $max-size - $min-size;
-  $max-width: $max-width - 499;
-  font-size: calc(
-    #{$min-size + px} + #{$adding-size} * ((100vw - 499px) / #{$max-width})
-  );
-}
+// @mixin font-pixel($min-size, $max-size) {
+//   $adding-size: $max-size - $min-size;
+//   $max-width: $max-width - 499;
+//   font-size: calc(
+//     #{$min-size + px} + #{$adding-size} * ((100vw - 499px) / #{$max-width})
+//   );
+// }
