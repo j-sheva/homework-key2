@@ -13,7 +13,7 @@
   &__post {
     @include media-query('tablet') {
       flex-direction: column;
-      max-width: 21.25rem;
+      // max-width: 18.75rem;
       gap: 0;
     }
   }
