@@ -1,0 +1,426 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/bg/bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.grid {
+  padding-left: 188px;
+  padding-right: 188px;
+  padding-top: 80px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 20px 1fr 20px 1fr 20px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
+}
+
+.grid > *:nth-child(5) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 9;
+}
+
+.grid > *:nth-child(6) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 11;
+}
+
+.grid > *:nth-child(7) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 13;
+}
+
+.grid > *:nth-child(8) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 15;
+}
+
+.grid > *:nth-child(9) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 17;
+}
+
+.grid > *:nth-child(10) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(11) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(12) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(13) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 7;
+}
+
+.grid > *:nth-child(14) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 9;
+}
+
+.grid > *:nth-child(15) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 11;
+}
+
+.grid > *:nth-child(16) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 13;
+}
+
+.grid > *:nth-child(17) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 15;
+}
+
+.grid > *:nth-child(18) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 17;
+}
+
+.grid > *:nth-child(19) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(20) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(21) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(22) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 7;
+}
+
+.grid > *:nth-child(23) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 9;
+}
+
+.grid > *:nth-child(24) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 11;
+}
+
+.grid > *:nth-child(25) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 13;
+}
+
+.grid > *:nth-child(26) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 15;
+}
+
+.grid > *:nth-child(27) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 17;
+}
+
+.grid > *:nth-child(28) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+}
+
+.grid > *:nth-child(29) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 3;
+}
+
+.grid > *:nth-child(30) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 5;
+}
+
+.grid > *:nth-child(31) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 7;
+}
+
+.grid > *:nth-child(32) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 9;
+}
+
+.grid > *:nth-child(33) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 11;
+}
+
+.grid > *:nth-child(34) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 13;
+}
+
+.grid > *:nth-child(35) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 15;
+}
+
+.grid > *:nth-child(36) {
+  -ms-grid-row: 7;
+  -ms-grid-column: 17;
+}
+.grid__item {
+  background-color: transparent;
+  width: 100%;
+  height: 133px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+.grid__card_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.grid__item:hover .grid__card_inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.grid__card_cover, .grid__card_face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+          box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2509803922);
+}
+.grid__card_cover {
+  background-image: url(../images/cover/cover.png);
+  background-size: cover;
+  background-position: center;
+}
+.grid__card_face {
+  background: linear-gradient(153.9deg, #474747 1.94%, #373737 97.93%);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.text {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  text-align: center;
+  position: absolute;
+  width: 16px;
+}
+.text__top {
+  top: 4px;
+  left: 5px;
+  color: #bf8b4f;
+}
+.text__bottom {
+  bottom: 4px;
+  right: 5px;
+  rotate: 180deg;
+  color: #78552a;
+}
+
+.icon {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+}
+.icon__top {
+  top: 21px;
+  left: 8px;
+  fill: #bf8b4f;
+}
+.icon__bottom {
+  bottom: 21px;
+  right: 8px;
+  rotate: 180deg;
+  fill: #78552a;
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
