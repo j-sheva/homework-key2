@@ -1,0 +1,69 @@
+.promises {
+  padding-bottom: 114px;
+  display: flex;
+  align-items: center;
+  &__right {
+    width: 100%;
+    padding-left: 70px;
+    margin-left: -200px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    background: $color-white;
+    opacity: 0.9;
+    column-gap: 100px;
+    row-gap: 60px;
+  }
+
+  &__item {
+    max-width: 300px;
+
+    &:last-child {
+      padding-top: 14px;
+    }
+  }
+
+  &__title {
+    color: $color-dark-blue;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    padding-bottom: 8px;
+  }
+
+  &__text {
+    color: $color-dark-blue;
+    opacity: 0.8;
+    padding-bottom: 8px;
+  }
+
+  &__button {
+    display: block;
+    margin: 0 auto;
+
+    &_border {
+      border: 1px solid $color-grey;
+      padding-top: 33px;
+      padding-bottom: 33px;
+      &:hover {
+        border: 1px solid $color-dark-red;
+      }
+
+      &:hover .button {
+        color: $color-dark-red;
+      }
+
+      &:hover .button::after {
+        background: $color-dark-red;
+      }
+    }
+  }
+}
+
+.button:hover .promises__button_border {
+}

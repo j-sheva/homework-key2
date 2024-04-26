@@ -1,0 +1,26 @@
+$color-dark-blue: #262a3f;
+$color-dark-grey: #515773;
+$color-grey: #e4e4e4;
+$color-medium-blue: #586291;
+$color-white: #ffffff;
+$color-red: #f1897b;
+$color-dark-red: #e54f3a;
+$color-green: #85bbb1;
+$color-green-neon: #53f3cd;
+$color-dark-green-neon: #02e0ab;
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == 'phone' {
+    @media only screen and (max-width: 599px) {
+      @content;
+    }
+  } @else if $breakpoint == 'tablet' {
+    @media only screen and (max-width: 840px) {
+      @content;
+    }
+  } @else if $breakpoint == 'desktop' {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  }
+}

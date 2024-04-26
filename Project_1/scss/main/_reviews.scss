@@ -1,0 +1,55 @@
+.reviews {
+  padding-bottom: 100px;
+  &__text {
+    padding-top: 20px;
+    padding-bottom: 50px;
+    max-width: 400px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  &__bg {
+    width: 370px;
+    height: 340px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    &:nth-child(1) {
+      background-image: url(../../images/desktop/bg-1.webp);
+    }
+
+    &:nth-child(2) {
+      background-image: url(../../images/desktop/bg-2.webp);
+    }
+
+    &:nth-child(3) {
+      background-image: url(../../images/desktop/bg-3.webp);
+    }
+  }
+  &__review {
+    padding: 30px 40px 30px 40px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgba(25, 28, 41, 0.6);
+  }
+
+  &__copy {
+    color: $color-white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

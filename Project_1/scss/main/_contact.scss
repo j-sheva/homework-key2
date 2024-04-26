@@ -1,0 +1,46 @@
+.contact {
+  padding-top: 58px;
+  padding-bottom: 104px;
+  border-top: 1px solid $color-grey;
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    padding-top: 16px;
+  }
+  &__title {
+    padding-bottom: 29px;
+  }
+
+  &__text {
+    max-width: 470px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 38px;
+  }
+  &__input {
+    width: 470px;
+    border: none;
+    border-bottom: 1px solid $color-grey;
+    padding-bottom: 12px;
+    color: rgb(38, 42, 63, 0.5);
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.44px;
+    &:focus-visible {
+      outline: none;
+      border-bottom: 1px solid $color-dark-red;
+    }
+  }
+
+  &__button {
+    width: 177px;
+  }
+}

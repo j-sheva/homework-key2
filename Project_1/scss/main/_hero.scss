@@ -1,0 +1,24 @@
+.hero {
+  padding-top: 150px;
+
+  &__title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 52px;
+    text-align: left;
+    color: $color-dark-blue;
+    max-width: 523px;
+
+    &_green {
+      font-style: italic;
+      color: $color-green;
+    }
+  }
+
+  &__text {
+    max-width: 439px;
+    padding-top: 20px;
+    padding-bottom: 48px;
+  }
+}
