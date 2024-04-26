@@ -564,13 +564,13 @@ video {
   background-position: center;
 }
 .reviews__bg:nth-child(1) {
-  background-image: url(../../images/desktop/bg-1.webp);
+  background-image: url(../images/desktop/bg-1.webp);
 }
 .reviews__bg:nth-child(2) {
-  background-image: url(../../images/desktop/bg-2.webp);
+  background-image: url(../images/desktop/bg-2.webp);
 }
 .reviews__bg:nth-child(3) {
-  background-image: url(../../images/desktop/bg-3.webp);
+  background-image: url(../images/desktop/bg-3.webp);
 }
 .reviews__review {
   padding: 30px 40px 30px 40px;
