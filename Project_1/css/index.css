@@ -365,7 +365,7 @@ body {
   padding-bottom: 120px;
 }
 .quote__wrapper {
-  background-image: url(../../images/desktop/quote-background.png);
+  background-image: url(../images/desktop/quote-background.png);
   padding: 100px 160px 100px 160px;
   display: -webkit-box;
   display: -ms-flexbox;
