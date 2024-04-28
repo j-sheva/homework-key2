@@ -1,13 +1,27 @@
 @import '_reset-style.scss';
 @import '_variables.scss';
-@import '_font.scss';
+// @import '_font.scss';
 @import '_header.scss';
 @import '_main.scss';
 @import '_footer.scss';
 
+body {
+  color: $color-dark-blue;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.625rem;
+  text-align: left;
+
+  @include media-query('mobile') {
+    font-size: 1rem;
+  }
+}
+
 main {
   width: 100vw;
 }
+
 .container {
   max-width: 73.125rem;
   padding-right: 1rem;
