@@ -9,6 +9,9 @@
     ),
     rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(4.5008px);
+  @include media-query('tablet') {
+    margin-top: 0.8125rem;
+  }
 
   &__container {
     display: flex;
@@ -19,20 +22,31 @@
     padding-top: 1.45rem;
     padding-bottom: 1.25rem;
     fill: $color-white;
+
+    @include media-query('tablet') {
+      z-index: 1;
+    }
   }
   &__list {
     display: flex;
     gap: 1.78rem;
+
+    @include media-query('tablet') {
+      flex-direction: column;
+      gap: 2.3125rem;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   &__item {
     position: relative;
-    padding-bottom: 2px;
+    padding-bottom: 0.125rem;
 
     &:hover::after {
       content: '';
       width: 100%;
-      height: 3px;
+      height: 0.1875rem;
       background-color: $color-red;
       opacity: 0.3;
       position: absolute;
@@ -50,10 +64,67 @@
     font-weight: 400;
     line-height: 1.5rem;
     letter-spacing: 0.07rem;
+    @include media-query('tablet') {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__nav {
+    @include media-query('tablet') {
+      display: none;
+      position: fixed;
+      flex-direction: column;
+      height: 100vh;
+      width: 100vw;
+      top: -1.875rem;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: $color-white;
+      padding-top: 10rem;
+
+      &.open {
+        display: flex;
+      }
+      &.open .header__item:hover:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    @include media-query('tablet') {
+      display: block;
+      padding-right: 0.25rem;
+      cursor: pointer;
+
+      &.active &__item:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active &__item:nth-child(1) {
+        transform: translateY(0.4063rem) rotate(45deg);
+      }
+
+      &.active &__item:nth-child(3) {
+        transform: translateY(-0.4063rem) rotate(-45deg);
+      }
+    }
+    &__item {
+      display: block;
+      width: 1.5rem;
+      height: 0.1563rem;
+      margin: 0.25rem auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: $color-dark-blue;
+    }
   }
 }
 
 .logo {
-  width: 6.7001rem;
+  width: 6.7rem;
   height: 2rem;
 }

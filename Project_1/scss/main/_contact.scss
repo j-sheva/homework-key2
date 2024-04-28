@@ -1,46 +1,80 @@
 .contact {
-  padding-top: 58px;
-  padding-bottom: 104px;
-  border-top: 1px solid $color-grey;
+  padding-top: 3.625rem;
+  padding-bottom: 6.5rem;
+  border-top: 0.0625rem solid $color-grey;
   display: flex;
   justify-content: space-between;
 
+  @include media-query('tablet') {
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+  }
+
+  @include media-query('mobile') {
+    padding-top: 0rem;
+    padding-bottom: 4rem;
+  }
+
   &__item {
-    padding-top: 16px;
+    padding-top: 1rem;
+    @include media-query('mobile') {
+      width: 100%;
+    }
   }
   &__title {
-    padding-bottom: 29px;
+    padding-bottom: 1.8125rem;
+
+    @include media-query('mobile') {
+      padding-bottom: 1rem;
+    }
   }
 
   &__text {
-    max-width: 470px;
+    max-width: 29.375rem;
+
+    @include media-query('mobile') {
+      max-width: 20.625rem;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5rem;
+      text-align: left;
+    }
   }
 
   &__form {
     display: flex;
     flex-direction: column;
+    gap: 2.375rem;
 
-    gap: 38px;
+    @include media-query('mobile') {
+      width: 100%;
+    }
   }
   &__input {
-    width: 470px;
+    width: 29.375rem;
     border: none;
-    border-bottom: 1px solid $color-grey;
-    padding-bottom: 12px;
+    border-bottom: 0.0625rem solid $color-grey;
+    padding-bottom: 0.75rem;
     color: rgb(38, 42, 63, 0.5);
     font-family: 'Playfair Display', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: italic;
     font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 1.44px;
+    line-height: 1.25rem;
+    letter-spacing: 0.09rem;
+
+    @include media-query('mobile') {
+      width: 100%;
+    }
+
     &:focus-visible {
       outline: none;
-      border-bottom: 1px solid $color-dark-red;
+      border-bottom: 0.0625rem solid $color-dark-red;
     }
   }
 
   &__button {
-    width: 177px;
+    width: 10.5rem;
   }
 }

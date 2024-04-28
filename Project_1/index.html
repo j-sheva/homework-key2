@@ -36,12 +36,12 @@
               <a class="header__link" href="#">Resources</a>
             </li>
           </ul>
-          <div class="header__burger">
-            <span class="header__burger__item"></span>
-            <span class="header__burger__item"></span>
-            <span class="header__burger__item"></span>
-          </div>
         </nav>
+        <div class="header__burger">
+          <span class="header__burger__item"></span>
+          <span class="header__burger__item"></span>
+          <span class="header__burger__item"></span>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -175,7 +175,7 @@
             <p class="quote__name name">Lennon Burnett, Solis Group CEO</p>
           </div>
         </div>
-        <div class="video">
+        <section class="video">
           <div class="video__wrapper">
             <div class="video__tablet">
               <video
@@ -209,7 +209,7 @@
               creation and redemption and reporting.
             </p>
           </div>
-        </div>
+        </section>
         <div class="promises">
           <picture class="promises__image">
             <source
@@ -246,7 +246,7 @@
             </div>
           </div>
         </div>
-        <div class="reviews">
+        <section class="reviews">
           <div class="reviews__item item">
             <h2 class="reviews__title title">
               Client <span class="title_green">reviews</span>
@@ -295,15 +295,15 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="contact">
+        </section>
+        <section class="contact">
           <div class="contact__item item">
             <h2 class="contact__title title">
               Contact <span class="title_green">our sales team</span>
             </h2>
             <p class="contact__text text">
-              HOur team is happy to answer your sales questions. Fill out the
-              form and we’ll be in touch as soon as possible.
+              Our team is happy to answer your sales questions. <br />
+              Fill out the form and we’ll be in touch as soon as possible.
             </p>
           </div>
           <form action="#" class="contact__form" method="post">
@@ -333,7 +333,7 @@
             ></textarea>
             <button class="contact__button button">SEND REQuest</button>
           </form>
-        </div>
+        </section>
       </div>
     </main>
     <footer class="footer">
@@ -350,5 +350,13 @@
         </div>
       </div>
     </footer>
+    <script>
+      document
+        .querySelector('.header__burger')
+        .addEventListener('click', function () {
+          this.classList.toggle('active');
+          document.querySelector('.header__nav').classList.toggle('open');
+        });
+    </script>
   </body>
 </html>

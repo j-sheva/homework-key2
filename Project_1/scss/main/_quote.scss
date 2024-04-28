@@ -1,32 +1,60 @@
 .quote {
-  padding-top: 8px;
-  padding-bottom: 120px;
+  padding-top: 0.5rem;
+  padding-bottom: 7.5rem;
+
+  @include media-query('mobile') {
+    padding-bottom: 4.125rem;
+  }
+
   &__wrapper {
-    background-image: url(../images/desktop/quote-background.png);
-    padding: 100px 160px 100px 160px;
+    background-image: url(../images/desktop/quote-background.webp);
+    padding: 6.25rem 10rem 6.25rem 10rem;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 2.5rem;
     position: relative;
+    background-size: cover;
+    background-position: center;
+
+    @include media-query('tablet') {
+      padding: 5rem 3.75rem 5rem 5rem;
+    }
+    @include media-query('mobile') {
+      padding: 4.25rem 1.5625rem 3.75rem 2.4375rem;
+    }
   }
 
   &__icon {
-    width: 102px;
-    height: 84px;
+    width: 6.375rem;
+    height: 5.25rem;
     position: absolute;
-    left: 100px;
-    top: 70px;
+    left: 6.25rem;
+    top: 4.375rem;
     z-index: 0;
+    @include media-query('tablet') {
+      left: 2.5rem;
+      top: 3rem;
+    }
+
+    @include media-query('mobile') {
+      left: 1.25rem;
+      top: 1.75rem;
+    }
   }
 
   &__text {
-    max-width: 710px;
+    max-width: 44.375rem;
     color: $color-white;
-    font-size: 32px;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 46px;
-    letter-spacing: 1.28px;
+    line-height: 2.875rem;
+    letter-spacing: 0.08rem;
     z-index: 1;
+    @include media-query('mobile') {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      letter-spacing: 0.04em;
+    }
   }
 }

@@ -1,23 +1,35 @@
 .video {
-  padding-bottom: 120px;
+  padding-bottom: 7.5rem;
+
+  @include media-query('mobile') {
+    padding-bottom: 0rem;
+  }
 
   &__wrapper {
-    border-radius: 32px;
-    border: 1px solid $color-grey;
+    border-radius: 2rem;
+    border: 0.0625rem solid $color-grey;
     position: relative;
     width: 83%;
     aspect-ratio: 9.7 / 5.4;
     margin: 0 auto;
+    @include media-query('tablet') {
+      width: 100%;
+    }
 
     &::before {
       content: '';
       position: absolute;
       top: 50%;
-      left: 8px;
-      width: 13px;
-      height: 13px;
-      border-radius: 32px;
-      border: 1px solid $color-grey;
+      left: 0.5rem;
+      width: 0.8125rem;
+      height: 0.8125rem;
+      border-radius: 2rem;
+      border: 0.0625rem solid $color-grey;
+      @include media-query('mobile') {
+        left: 0.125rem;
+        width: 0.3125rem;
+        height: 0.3125rem;
+      }
     }
 
     &::after {
@@ -25,38 +37,53 @@
       position: absolute;
       top: 50%;
 
-      right: 14px;
-      width: 35px;
-      height: 35px;
-      border-radius: 32px;
-      border: 1px solid $color-grey;
+      right: 0.875rem;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      border-radius: 2rem;
+      border: 0.0625rem solid $color-grey;
+      @include media-query('mobile') {
+        right: 0.3125rem;
+        width: 0.75rem;
+        height: 0.75rem;
+      }
     }
   }
 
   &__tablet {
     display: inline-block;
-    max-width: 870px;
+    max-width: 54.375rem;
     aspect-ratio: 87 / 53;
     object-fit: cover;
-    padding: 31px 70px 31px 30px;
+    padding: 1.9375rem 4.375rem 1.9375rem 1.875rem;
+    @include media-query('mobile') {
+      padding: 0.625rem 1.5625rem 0.625rem 0.625rem;
+    }
   }
 
   &__item {
-    padding-top: 52px;
-    max-width: 970px;
+    padding-top: 3.25rem;
+    max-width: 60.625rem;
     margin: 0 auto;
+
+    @include media-query('mobile') {
+      padding-top: 1.375rem;
+    }
   }
   &__title {
-    padding-bottom: 26px;
+    padding-bottom: 1.625rem;
+    @include media-query('mobile') {
+      padding-bottom: 1rem;
+    }
   }
   &__text {
-    max-width: 800px;
+    max-width: 50rem;
   }
 }
 
 video {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   opacity: 0.5;
 }

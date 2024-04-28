@@ -10,12 +10,12 @@ $color-green-neon: #53f3cd;
 $color-dark-green-neon: #02e0ab;
 
 @mixin media-query($breakpoint) {
-  @if $breakpoint == 'phone' {
+  @if $breakpoint == 'mobile' {
     @media only screen and (max-width: 599px) {
       @content;
     }
   } @else if $breakpoint == 'tablet' {
-    @media only screen and (max-width: 840px) {
+    @media only screen and (max-width: 1023px) {
       @content;
     }
   } @else if $breakpoint == 'desktop' {
