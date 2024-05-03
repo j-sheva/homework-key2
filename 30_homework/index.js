@@ -20,9 +20,10 @@
 
 {
   const volume = prompt('Вкажіть обсяг флешки (Гб)?');
-  const fileSize = 820;
+  const fileSizeMB = 820;
+  const fileSizeGB = fileSizeMB / 1024;
 
-  const fileNumbers = (volume * 1e3) / fileSize;
+  const fileNumbers = volume / fileSizeGB.toFixed(4);
   alert(
     `Кількість файлів, що поміститься на флешку: ${Math.floor(fileNumbers)} `
   );
