@@ -3,44 +3,60 @@
 // Завдання 1:
 const userAge = prompt('Вкажіть свій вік:');
 if (!isNaN(userAge) && userAge >= 0) {
-  if (userAge >= 0 && userAge <= 11) {
-    console.log('Вітаю, ви дитина!');
-  } else if (userAge >= 12 && userAge <= 17) {
-    console.log('Вітаю (але не точно), ви підліток!');
-  } else if (userAge >= 18 && userAge <= 59) {
-    console.log('Співчуваю, ви дорослий!');
-  } else {
-    console.log('Ви пенсіонер.');
+  switch (true) {
+    case userAge <= 12:
+      console.log('Вітаю, ви дитина!');
+      break;
+    case userAge <= 18:
+      console.log('Вітаю (але не точно), ви підліток!');
+      break;
+
+    case userAge <= 59:
+      console.log('Співчуваю, ви дорослий!');
+      break;
+    default:
+      console.log('Ви пенсіонер.');
   }
 } else {
   console.log('Будь ласка, введіть коректний вік.'); // Якщо вік невірний, запитуємо знову
 }
 
 // Завдання 2:
-const number = prompt('Введіть число від 0 до 9');
+const number = Number(prompt('Введіть число від 0 до 9'));
 
-if (number == 1) {
-  console.log('!');
-} else if (number == 2) {
-  console.log('@');
-} else if (number == 3) {
-  console.log('#');
-} else if (number == 4) {
-  console.log('$');
-} else if (number == 5) {
-  console.log('%');
-} else if (number == 6) {
-  console.log('^');
-} else if (number == 7) {
-  console.log('&');
-} else if (number == 8) {
-  console.log('*');
-} else if (number == 9) {
-  console.log('(');
-} else if (number == 0) {
-  console.log(')');
-} else {
-  console.log('Будь ласка!!!! ВВЕДІТЬ ЧИСЛО ВІД 0 ДО 9!!!!');
+switch (number) {
+  case 1:
+    console.log('!');
+    break;
+  case 2:
+    console.log('@');
+    break;
+  case 3:
+    console.log('#');
+    break;
+  case 4:
+    console.log('$');
+    break;
+  case 5:
+    console.log('%');
+    break;
+  case 6:
+    console.log('^');
+    break;
+  case 7:
+    console.log('&');
+    break;
+  case 8:
+    console.log('*');
+    break;
+  case 9:
+    console.log('(');
+    break;
+  case 0:
+    console.log(')');
+    break;
+  default:
+    console.log('Будь ласка!!!! ВВЕДІТЬ ЧИСЛО ВІД 0 ДО 9!!!!');
 }
 
 // Завдання 3:
@@ -108,7 +124,7 @@ if (!isNaN(num)) {
 
 const num5 = prompt('Введіть 5ти значне число');
 if (num5.length === 5 && !isNaN(num5)) {
-  if (num5[0] === num5[num5.length - 1] && num5[1] === num5[num5.length - 2]) {
+  if (num5[0] === num5[4] && num5[1] === num5[3]) {
     console.log(`Число ${num5} - паліндром`);
   } else {
     console.log(`Число ${num5} - НЕ паліндром`);
@@ -119,19 +135,19 @@ if (num5.length === 5 && !isNaN(num5)) {
 
 // Завдання 2:
 
-const summa = prompt('Введіть суму покупки');
-let finalSumma = 0;
-if (!isNaN(summa)) {
-  if (summa < 200) {
-    console.log(`Ваша знижка 0%, сумма до сплати: ${summa}`);
-  } else if (200 <= summa && summa < 300) {
-    finalSumma = summa - summa * 0.03;
+let finalSumma = prompt('Введіть суму покупки');
+
+if (!isNaN(finalSumma)) {
+  if (finalSumma < 200) {
+    console.log(`Ваша знижка 0%, сумма до сплати: ${finalSumma}`);
+  } else if (finalSumma <= 300) {
+    finalSumma *= 0.97;
     console.log(`Ваша знижка 3%, сумма до сплати: ${finalSumma.toFixed(2)}`);
-  } else if (300 <= summa && summa < 500) {
-    finalSumma = summa - summa * 0.05;
+  } else if (finalSumma <= 500) {
+    finalSumma *= 0.95;
     console.log(`Ваша знижка 5%, сумма до сплати: ${finalSumma.toFixed(2)}`);
   } else {
-    finalSumma = summa - summa * 0.07;
+    finalSumma *= 0.93;
     console.log(`Ваша знижка 7%, сумма до сплати: ${finalSumma.toFixed(2)}`);
   }
 } else {
