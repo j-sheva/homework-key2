@@ -1,63 +1,31 @@
-const time = {
-  hours: 20,
-  minutes: 59,
-  seconds: 45,
+// Функція, яка перевіряє, чи є передане число досконалим
 
-  // Функція для виведення часу на екран
-  displayTime() {
-    const formattedHours = String(this.hours).padStart(2, '0');
-    const formattedMinutes = String(this.minutes).padStart(2, '0');
-    const formattedSeconds = String(this.seconds).padStart(2, '0');
-    console.log(`${formattedHours}:${formattedMinutes}:${formattedSeconds}`);
-  },
-
-  // Функція для зміни часу на передану кількість секунд
-  addSeconds(seconds) {
-    this.seconds += seconds;
-
-    while (this.seconds >= 60) {
-      this.seconds -= 60;
-      this.minutes += 1;
+function isPerfectNumber(num) {
+  if (num <= 1) return false;
+  let sum = 0;
+  for (let i = 1; i <= num / 2; i++) {
+    if (num % i === 0) {
+      sum += i;
     }
+  }
+  return sum === num;
+}
 
-    while (this.minutes >= 60) {
-      this.minutes -= 60;
-      this.hours += 1;
+console.log(isPerfectNumber(6));
+console.log(isPerfectNumber(28));
+console.log(isPerfectNumber(12));
+
+// Функція, яка виводить досконалі числа в заданому діапазоні
+
+function findPerfectNumbersInRange(min, max) {
+  const perfectNumbers = [];
+  for (let i = min; i <= max; i++) {
+    if (isPerfectNumber(i)) {
+      perfectNumbers.push(i);
     }
+  }
+  return perfectNumbers;
+}
 
-    while (this.hours >= 24) {
-      this.hours -= 24;
-    }
-  },
-
-  // Функція для зміни часу на передану кількість хвилин
-  addMinutes(minutes) {
-    this.minutes += minutes;
-
-    while (this.minutes >= 60) {
-      this.minutes -= 60;
-      this.hours += 1;
-    }
-
-    while (this.hours >= 24) {
-      this.hours -= 24;
-    }
-  },
-
-  // Функція для зміни часу на передану кількість годин
-  addHours(hours) {
-    this.hours += hours;
-
-    while (this.hours >= 24) {
-      this.hours -= 24;
-    }
-  },
-};
-
-time.displayTime();
-time.addSeconds(30);
-time.displayTime();
-time.addMinutes(80);
-time.displayTime();
-time.addHours(5);
-time.displayTime();
+console.log(findPerfectNumbersInRange(1, 1000));
+console.log(findPerfectNumbersInRange(1, 10000));
