@@ -1,18 +1,18 @@
-const time = {
-  hours: 20,
-  minutes: 59,
-  seconds: 45,
+function Time(hours, minutes, seconds) {
+  this.hours = hours;
+  this.minutes = minutes;
+  this.seconds = seconds;
 
   // Функція для виведення часу на екран
-  displayTime() {
+  this.displayTime = function () {
     const formattedHours = String(this.hours).padStart(2, '0');
     const formattedMinutes = String(this.minutes).padStart(2, '0');
     const formattedSeconds = String(this.seconds).padStart(2, '0');
     console.log(`${formattedHours}:${formattedMinutes}:${formattedSeconds}`);
-  },
+  };
 
   // Функція для зміни часу на передану кількість секунд
-  addSeconds(seconds) {
+  this.addSeconds = function (seconds) {
     this.seconds += seconds;
 
     while (this.seconds >= 60) {
@@ -28,10 +28,10 @@ const time = {
     while (this.hours >= 24) {
       this.hours -= 24;
     }
-  },
+  };
 
   // Функція для зміни часу на передану кількість хвилин
-  addMinutes(minutes) {
+  this.addMinutes = function (minutes) {
     this.minutes += minutes;
 
     while (this.minutes >= 60) {
@@ -42,18 +42,22 @@ const time = {
     while (this.hours >= 24) {
       this.hours -= 24;
     }
-  },
+  };
 
   // Функція для зміни часу на передану кількість годин
-  addHours(hours) {
+  this.addHours = function (hours) {
     this.hours += hours;
 
     while (this.hours >= 24) {
       this.hours -= 24;
     }
-  },
-};
+  };
+}
 
+// Створення об'єкта time за допомогою функції-конструктора
+const time = new Time(20, 59, 45);
+
+// Виклик методів об'єкта time
 time.displayTime();
 time.addSeconds(30);
 time.displayTime();
