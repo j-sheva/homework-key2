@@ -3,11 +3,11 @@
 let shoppingList = [];
 
 function Product(name, quantity, purchased, pricePerUnit) {
-  this.name = name;
-  this.quantity = quantity;
-  this.purchased = purchased;
-  this.pricePerUnit = pricePerUnit;
-  this.total = this.quantity * this.pricePerUnit;
+  (this.name = name),
+    (this.quantity = quantity),
+    (this.purchased = purchased),
+    (this.pricePerUnit = pricePerUnit),
+    (this.total = this.quantity * this.pricePerUnit);
 }
 
 let product1 = new Product('Milk', 2, false, 1.5);
@@ -18,34 +18,43 @@ let product5 = new Product('Butter', 2, false, 2.5);
 
 shoppingList.push(product1, product2, product3, product4, product5);
 
-function displayShoppingList(list) {
+function sortByPurchased(list) {
   list.sort((a, b) => a.purchased - b.purchased);
-  console.log(list);
 }
 
+sortByPurchased(shoppingList);
+
+function displayShoppingList(list) {
+  console.log(JSON.parse(JSON.stringify(list)));
+}
 displayShoppingList(shoppingList);
 
-let buyProduct = function (productName) {
+// Функція для відзначення продукту як придбаний
+let buyProduct = function (shoppingList, productName) {
   const product = shoppingList.find((product) => product.name === productName);
   if (product) {
     product.purchased = true;
-    console.log(`"${productName}" is purchased.`);
+    console.log(` "${productName}" is purchased.`);
   } else {
-    console.log(`"${productName}" not found.`);
+    console.log(` "${productName}" not found.`);
   }
 };
+buyProduct(shoppingList, 'Milk');
 
-buyProduct('Milk');
-
+// Видалення продукту
 let removeProduct = function (productName) {
-  shoppingList = shoppingList.filter((product) => product.name !== productName);
-  console.log(`"${productName}" is deleted.`);
-  console.log(shoppingList);
+  const newList = shoppingList.filter(
+    (product) => product.name !== productName
+  );
+  console.log(` "${productName}" is deleted.`);
+  console.log(newList);
+  return newList;
 };
 
-removeProduct('Bread');
+shoppingList = removeProduct('Bread');
 
-let addProduct = function (name, quantity, pricePerUnit) {
+// Функція для додавання покупки в список
+let addProduct = function (shoppingList, name, quantity) {
   const existingProduct = shoppingList.find((product) => product.name === name);
   if (existingProduct) {
     existingProduct.quantity += quantity;
@@ -53,51 +62,45 @@ let addProduct = function (name, quantity, pricePerUnit) {
       existingProduct.quantity * existingProduct.pricePerUnit;
     console.log(`The quantity of the product "${name}" has been increased.`);
   } else {
-    const newProduct = new Product(name, quantity, false, pricePerUnit);
+    const newProduct = new Product(name, quantity);
     shoppingList.push(newProduct);
-    console.log(`"${name}" has been added.`);
+    console.log(`"${name}" has been added `);
   }
-  console.log(shoppingList);
+
+  displayShoppingList(shoppingList);
 };
 
-addProduct('Cheese', 10, 1.8);
-addProduct('Butter', 55, 2.5);
+addProduct(shoppingList, 'Cheese', 1);
+addProduct(shoppingList, 'Butter', 55);
 
-let calculateTotalSum = function () {
+// Функція для підрахунку суми всіх продуктів
+let calculateTotalSum = function (shoppingList) {
   const totalSum = shoppingList.reduce(
-    (total, product) => total + product.total,
+    (total, product) => total + parseInt(product.total),
     0
   );
   console.log(`Total sum: ${totalSum}$`);
-  return totalSum;
 };
+calculateTotalSum(shoppingList);
 
-calculateTotalSum();
-
-let calculateSumByStatus = function (purchased) {
+// Функція для підрахунку суми всіх придбаних або не придбаних продуктів
+let calculateSumByStatus = function (shoppingList, purchased) {
   const sum = shoppingList
     .filter((product) => product.purchased === purchased)
     .reduce((total, product) => total + product.total, 0);
 
-  console.log(
-    `Total sum ${purchased ? 'purchased' : 'not purchased'} items: ${sum}$`
-  );
-  return sum;
+  console.log(`Total sum putchased items: ${sum}$`);
 };
+calculateSumByStatus(shoppingList, true);
 
-calculateSumByStatus(true);
-calculateSumByStatus(false);
-
-let sortBySum = function (ascending = true) {
-  shoppingList.sort((a, b) =>
-    ascending ? a.total - b.total : b.total - a.total
-  );
-  console.log(
-    `Sorted by sum (${ascending ? 'lower to higher' : 'higher to lower'}).`
-  );
+// Функція для сортування продуктів за сумою
+let sortBySum = function (shoppingList, ascending = true) {
+  shoppingList.sort((a, b) => {
+    return ascending ? a.total - b.total : b.total - a.total;
+  });
+  console.log(`(${ascending ? 'lower --> higher' : 'higher --> lower'}).`);
 };
-
-sortBySum(true);
+sortBySum(shoppingList, true);
 displayShoppingList(shoppingList);
-sortBySum(false);
+sortBySum(shoppingList, false);
 displayShoppingList(shoppingList);
