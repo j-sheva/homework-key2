@@ -1,11 +1,13 @@
-const shoppingList = [];
+'use strict';
+
+let shoppingList = [];
 
 function Product(name, quantity, purchased, pricePerUnit) {
-  (this.name = name),
-    (this.quantity = quantity),
-    (this.purchased = purchased),
-    (this.pricePerUnit = pricePerUnit),
-    (this.total = this.quantity * this.pricePerUnit);
+  this.name = name;
+  this.quantity = quantity;
+  this.purchased = purchased;
+  this.pricePerUnit = pricePerUnit;
+  this.total = this.quantity * this.pricePerUnit;
 }
 
 let product1 = new Product('Milk', 2, false, 1.5);
@@ -18,37 +20,32 @@ shoppingList.push(product1, product2, product3, product4, product5);
 
 function displayShoppingList(list) {
   list.sort((a, b) => a.purchased - b.purchased);
-  console.log(shoppingList);
+  console.log(list);
 }
+
 displayShoppingList(shoppingList);
 
-// Функція для відзначення продукту як придбаний
-buyProduct = function (productName) {
+let buyProduct = function (productName) {
   const product = shoppingList.find((product) => product.name === productName);
   if (product) {
     product.purchased = true;
-    console.log(` "${productName}" is purchased.`);
+    console.log(`"${productName}" is purchased.`);
   } else {
-    console.log(` "${productName}" not found.`);
+    console.log(`"${productName}" not found.`);
   }
 };
+
 buyProduct('Milk');
 
-// Видалення продукту
-
-removeProduct = function (productName) {
-  const newList = shoppingList.filter(
-    (product) => product.name !== productName
-  );
-  console.log(` "${productName}" is deleted.`);
-  console.log(newList);
-  return newList;
+let removeProduct = function (productName) {
+  shoppingList = shoppingList.filter((product) => product.name !== productName);
+  console.log(`"${productName}" is deleted.`);
+  console.log(shoppingList);
 };
 
 removeProduct('Bread');
 
-// Функція для додавання покупки в список
-addProduct = function (name, quantity) {
+let addProduct = function (name, quantity, pricePerUnit) {
   const existingProduct = shoppingList.find((product) => product.name === name);
   if (existingProduct) {
     existingProduct.quantity += quantity;
@@ -56,45 +53,50 @@ addProduct = function (name, quantity) {
       existingProduct.quantity * existingProduct.pricePerUnit;
     console.log(`The quantity of the product "${name}" has been increased.`);
   } else {
-    const newProduct = new Product(name, quantity);
+    const newProduct = new Product(name, quantity, false, pricePerUnit);
     shoppingList.push(newProduct);
-    console.log(`"${name}" has been added `);
+    console.log(`"${name}" has been added.`);
   }
   console.log(shoppingList);
 };
 
-addProduct('Cheese', 1);
-addProduct('Butter', 55);
+addProduct('Cheese', 10, 1.8);
+addProduct('Butter', 55, 2.5);
 
-// Функція для підрахунку суми всіх продуктів
-calculateTotalSum = function () {
+let calculateTotalSum = function () {
   const totalSum = shoppingList.reduce(
-    (total, product) => total + parseInt(product.total),
+    (total, product) => total + product.total,
     0
   );
   console.log(`Total sum: ${totalSum}$`);
   return totalSum;
 };
+
 calculateTotalSum();
 
-// Функція для підрахунку суми всіх придбаних або не придбаних продуктів
-calculateSumByStatus = function (purchased) {
+let calculateSumByStatus = function (purchased) {
   const sum = shoppingList
     .filter((product) => product.purchased === purchased)
     .reduce((total, product) => total + product.total, 0);
 
-  console.log(`Total sum putchased items: ${sum}$`);
+  console.log(
+    `Total sum ${purchased ? 'purchased' : 'not purchased'} items: ${sum}$`
+  );
   return sum;
 };
-calculateSumByStatus(true);
 
-// Функція для сортування продуктів за сумою
-this.sortBySum = function (ascending = true) {
+calculateSumByStatus(true);
+calculateSumByStatus(false);
+
+let sortBySum = function (ascending = true) {
   shoppingList.sort((a, b) =>
     ascending ? a.total - b.total : b.total - a.total
   );
-  console.log(`(${ascending ? 'lower --> higher' : 'higher --> lower'}).`);
+  console.log(
+    `Sorted by sum (${ascending ? 'lower to higher' : 'higher to lower'}).`
+  );
 };
+
 sortBySum(true);
 displayShoppingList(shoppingList);
 sortBySum(false);

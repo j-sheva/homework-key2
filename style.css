@@ -197,3 +197,7 @@ li:last-child {
 li:hover {
   background: rgba(165, 117, 224, 0.388);
 }
+
+.sub {
+  font-size: 14px;
+}
