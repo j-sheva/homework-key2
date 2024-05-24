@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text</title>
+    <style>
+      #text-display {
+        border: 2px solid rgb(77, 0, 184);
+        width: 80%;
+        border-radius: 20px;
+        margin: 50px;
+        padding: 30px;
+        min-height: 400px;
+        font-size: 24px;
+        background-color: rgb(234, 229, 255);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      #text-edit {
+        font-family: Arial, Helvetica, sans-serif;
+        display: none;
+        width: 80%;
+        border-radius: 20px;
+        margin: 50px;
+        padding: 30px;
+        min-height: 400px;
+        font-size: 24px;
+        background-color: rgb(244, 241, 255);
+      }
+      p {
+        margin-left: 50px;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Для редагування натисніть ctrl + e <br />
+      Щоб зберігти зміни ctrl + s
+    </p>
+    <div id="text-display">Текст</div>
+    <textarea id="text-edit"></textarea>
+    <script src="js.js"></script>
+  </body>
+</html>

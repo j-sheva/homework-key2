@@ -1,0 +1,32 @@
+.resizable {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #ff0099;
+  border-radius: 20px;
+  position: relative;
+  padding-left: 20px;
+  box-sizing: border-box;
+  background-color: hwb(321 66% 0% / 0.311);
+}
+
+.resizer {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+
+  background: #ffffff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
+
+body {
+  background-color: black;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}

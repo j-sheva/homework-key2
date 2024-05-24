@@ -1,0 +1,22 @@
+body {
+  background-color: black;
+}
+table {
+  width: 100%;
+}
+th,
+td {
+  width: 22%;
+  border: 1px solid #72dbed;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: rgb(244, 253, 255, 0.3);
+  color: white;
+}
+th {
+  cursor: pointer;
+  background-color: #aff3ff;
+}
+.th {
+  color: black;
+}
