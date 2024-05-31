@@ -1,0 +1,62 @@
+@import '_reset-style.scss';
+@import '_normalize.scss';
+@import '_variables.scss';
+@import '_font.scss';
+@import '_header.scss';
+@import '_hero.scss';
+@import '_partners.scss';
+@import '_stock.scss';
+@import '_footer.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.button {
+  display: inline-flex;
+  padding: 15px 57px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0);
+
+  &:hover {
+    background-color: $tomato-light;
+    border: 2px solid $tomato-light;
+  }
+}
+.button_white {
+  border: 2px solid $brown-light;
+  color: $white;
+}
+.button_black {
+  border: 2px solid $black;
+  color: $black;
+}
+
+.arrow {
+  width: 40px;
+  height: 74px;
+  flex-shrink: 0;
+  &:hover {
+    fill: $tomato-light;
+  }
+}
+
+.title {
+  color: $black;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}

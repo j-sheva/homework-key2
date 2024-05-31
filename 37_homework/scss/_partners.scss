@@ -1,0 +1,41 @@
+.partners {
+  background-color: $brown-light;
+  padding-top: 70px;
+  padding-bottom: 70px;
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__logos {
+    position: relative;
+    padding-right: 107px;
+    padding-left: 107px;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: -10%;
+    &_right {
+      right: 40px;
+    }
+    &_left {
+      left: 40px;
+    }
+  }
+
+  &__logo {
+    margin: 0 10px;
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+}
