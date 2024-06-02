@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search</title>
+    <style>
+      /* Додайте свій CSS для стилізації сторінки */
+      .movie-list,
+      .pagination,
+      .movie-details {
+        margin-top: 20px;
+      }
+      .movie-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .movie-item button {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Movie Search</h1>
+    <form id="search-form">
+      <input
+        type="text"
+        id="search-query"
+        placeholder="Enter movie name"
+        required
+      />
+      <select id="search-type">
+        <option value="movie">Movie</option>
+        <option value="series">Series</option>
+        <option value="episode">Episode</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+    <div id="results" class="movie-list"></div>
+    <div id="pagination" class="pagination"></div>
+    <div id="movie-details" class="movie-details"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

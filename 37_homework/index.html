@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="images/sprite.svg" />
+    <link rel="stylesheet" href="images/logos-sprite.svg" />
     <link
       rel="stylesheet"
       type="text/css"
@@ -108,7 +109,7 @@
               <use xlink:href="images/sprite.svg#arrow_left"></use>
             </svg>
             <div class="arrivals__items">
-              <div class="arrivals__card card">
+              <!-- <div class="arrivals__card card">
                 <div class="card__tag"><p>in stock</p></div>
                 <img
                   src="images/webp/photo.webp"
@@ -156,15 +157,17 @@
                   Fender Telecaster Black Paisley Limited Edition
                 </p>
                 <p class="card__price">€1.499,00</p>
-              </div>
+              </div> -->
             </div>
             <svg class="icon arrow arrivals__arrow arrivals__arrow_right">
               <use xlink:href="images/sprite.svg#arrow_right"></use>
             </svg>
           </div>
-          <button class="arrivals__button button button_black">
-            View more
-          </button>
+          <div class="arrivals__button__wrapper">
+            <button class="arrivals__button button button_black">
+              View more
+            </button>
+          </div>
         </div>
       </section>
       <section class="partners">
@@ -175,52 +178,35 @@
               <use xlink:href="images/sprite.svg#arrow_left"></use>
             </svg>
             <div class="partners__slider">
-              <img
-                class="partners__logo"
-                src="images/svg/epiphone.svg"
-                alt="epiphone logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/esp.svg"
-                alt="esp logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/gibson.svg"
-                alt="gibson logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/engl.svg"
-                alt="engl logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/roland.svg"
-                alt="roland logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/fender.svg"
-                alt="fender logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/peavey.svg"
-                alt="peavey logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/marshal.svg"
-                alt="marshal logo"
-              />
-              <img
-                class="partners__logo"
-                src="images/svg/orange.svg"
-                alt="orange logo"
-              />
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#epiphone"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#esp"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#gibson"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#engl"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#roland"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#fender"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#peavey"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#marshal"></use>
+              </svg>
+              <svg class="icon partners__logo">
+                <use xlink:href="images/logos-sprite.svg#orange"></use>
+              </svg>
             </div>
+
             <svg class="icon arrow partners__arrow partners__arrow_right">
               <use xlink:href="images/sprite.svg#arrow_right"></use>
             </svg>
@@ -276,7 +262,7 @@
 
             <div>
               <a href="#">
-                <svg class="icon footer__icon">
+                <svg class="icon footer__icon pinterest">
                   <use xlink:href="images/sprite.svg#pinterest"></use>
                 </svg>
               </a>
@@ -284,7 +270,7 @@
 
             <div>
               <a href="#">
-                <svg class="icon footer__icon">
+                <svg class="icon footer__icon x">
                   <use xlink:href="images/sprite.svg#x"></use>
                 </svg>
               </a>
@@ -292,7 +278,7 @@
 
             <div>
               <a href="#">
-                <svg class="icon footer__icon">
+                <svg class="icon footer__icon youtube">
                   <use xlink:href="images/sprite.svg#youtube"></use>
                 </svg>
               </a>
@@ -305,6 +291,6 @@
       <p class="footer__text">© Copyright 2022. All rights reserved.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script type="module" src="js/script.js"></script>
   </body>
 </html>

@@ -27,21 +27,15 @@
     }
   }
 
-  // &__logo {
-  //   margin: 0 10px;
-  //   height: 70px;
-  // }
+  &__logo {
+    margin: 0 10px;
+  }
 
-  // &__slider {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   align-self: center;
-  //   align-content: center;
-  // }
-}
-
-.partners__slider .slick-list .slick-track .slick-slide {
-  margin: 0 12px;
-  height: 70px;
+  &__slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
 }

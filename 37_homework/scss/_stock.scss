@@ -7,12 +7,89 @@
   }
 
   &__slider {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    padding-right: 107px;
+    padding-left: 107px;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 40%;
+    &_left {
+      left: 40px;
+    }
+    &_right {
+      right: 40px;
+    }
   }
 
   &__button {
     margin: 0 auto;
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      padding-top: 53px;
+    }
   }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $brown-light;
+    margin: 0 5px;
+    height: inherit !important;
+    padding-bottom: 20px;
+
+    &:hover {
+      border: 1px solid $tomato-light;
+    }
+  }
+
+  &__card-title {
+    padding-top: 18px;
+    padding-bottom: 10px;
+    color: $black;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__price {
+    color: $black;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  &__label {
+    width: 60px;
+    height: 16px;
+    display: block;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-top: 4px;
+  }
+}
+
+[data-stock='IN STOCK'] {
+  background-color: $tomato-light;
+  color: $brown-light;
+}
+
+[data-stock='SOLD'] {
+  background-color: $brown-light;
+  color: $black;
 }

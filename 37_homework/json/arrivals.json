@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "Hagstrom Alvar Limited Edition",
+    "price": "€2.990,00",
+    "img": "../images/webp/photo.webp",
+    "inStock": true
+  },
+
+  {
+    "id": 2,
+    "name": "Hagstrom Alvar Limited Edition",
+    "price": "€2.990,00",
+    "img": "../images/webp/photo-1.webp",
+    "inStock": true
+  },
+
+  {
+    "id": 3,
+    "name": "Hagstrom Tremar Viking Deluxe Cloudy Seas",
+    "price": "€1.300,00",
+    "img": "../images/webp/photo-2.webp",
+    "inStock": false
+  },
+
+  {
+    "id": 4,
+    "name": "Suhr Standard Plus Trans Blue Denim",
+    "price": "€3.449,00",
+    "img": "../images/webp/photo-3.webp",
+    "inStock": true
+  },
+
+  {
+    "id": 5,
+    "name": "Fender Telecaster Black Paisley Limited Edition",
+    "price": "€1.499,00",
+    "img": "../images/webp/photo-4.webp",
+    "inStock": true
+  }
+]
