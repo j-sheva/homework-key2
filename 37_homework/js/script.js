@@ -17,7 +17,7 @@ $('.arrivals__items').slick({
   nextArrow: $('.arrivals__arrow_right'),
 });
 
-$.getJSON('../json_file/arrivals.json', function (data) {
+$.getJSON('./json_file/arrivals.json', function (data) {
   data.forEach((slide) => {
     let isInStock = slide.inStock ? 'IN STOCK' : 'SOLD';
     let sliderItem = `
