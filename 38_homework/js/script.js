@@ -1,27 +1,32 @@
-const apiKey = 'YOUR_API_KEY'; // Заміни на свій API ключ
-
-$(document).ready(function () {
-  $('#search-form').on('submit', function (event) {
-    event.preventDefault();
-    const query = $('#search-query').val();
-    const type = $('#search-type').val();
-    searchMovies(query, type, 1);
-  });
-
-  function searchMovies(query, type, page) {
-    $.ajax({
-      url: `http://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${apiKey}`,
-      method: 'GET',
-      success: function (response) {
-        if (response.Response === 'True') {
-          displayMovies(response.Search);
-          setupPagination(response.totalResults, query, type, page);
-        } else {
-          $('#results').html('<p>Movie not found!</p>');
-          $('#pagination').html('');
-        }
-      },
+const apiKey = '342419ad';
+document.addEventListener('DOMContentLoaded', () => {
+  document
+    .getElementById('search-form')
+    .addEventListener('submit', function (event) {
+      event.preventDefault();
+      const query = document.getElementById('search-query').value;
+      const type = document.getElementById('search-type').value;
+      searchMovies(query, type, 1);
     });
+
+  async function searchMovies(query, type, page) {
+    try {
+      const response = await fetch(
+        `http://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${apiKey}`
+      );
+      const data = await response.json();
+
+      if (data.Response === 'True') {
+        displayMovies(data.Search);
+        setupPagination(data.totalResults, query, type, page);
+      } else {
+        document.getElementById('results').innerHTML =
+          '<p>Movie not found!</p>';
+        document.getElementById('pagination').innerHTML = '';
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   }
 
   function displayMovies(movies) {
@@ -35,7 +40,7 @@ $(document).ready(function () {
         `
       )
       .join('');
-    $('#results').html(movieList);
+    document.getElementById('results').innerHTML = movieList;
   }
 
   function setupPagination(totalResults, query, type, currentPage) {
@@ -44,27 +49,31 @@ $(document).ready(function () {
     for (let i = 1; i <= totalPages; i++) {
       paginationHtml += `<button onclick="searchMovies('${query}', '${type}', ${i})">${i}</button>`;
     }
-    $('#pagination').html(paginationHtml);
+    document.getElementById('pagination').innerHTML = paginationHtml;
   }
 });
 
-function showDetails(imdbID) {
-  $.ajax({
-    url: `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`,
-    method: 'GET',
-    success: function (response) {
-      if (response.Response === 'True') {
-        const detailsHtml = `
-                    <h2>${response.Title}</h2>
-                    <p>${response.Plot}</p>
-                    <p><strong>Year:</strong> ${response.Year}</p>
-                    <p><strong>Genre:</strong> ${response.Genre}</p>
-                    <p><strong>Director:</strong> ${response.Director}</p>
-                `;
-        $('#movie-details').html(detailsHtml);
-      } else {
-        $('#movie-details').html('<p>Movie details not found!</p>');
-      }
-    },
-  });
+async function showDetails(imdbID) {
+  try {
+    const response = await fetch(
+      `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
+    );
+    const data = await response.json();
+
+    if (data.Response === 'True') {
+      const detailsHtml = `
+                <h2>${data.Title}</h2>
+                <p>${data.Plot}</p>
+                <p><strong>Year:</strong> ${data.Year}</p>
+                <p><strong>Genre:</strong> ${data.Genre}</p>
+                <p><strong>Director:</strong> ${data.Director}</p>
+            `;
+      document.getElementById('movie-details').innerHTML = detailsHtml;
+    } else {
+      document.getElementById('movie-details').innerHTML =
+        '<p>Movie details not found!</p>';
+    }
+  } catch (error) {
+    console.error('Error fetching movie details:', error);
+  }
 }

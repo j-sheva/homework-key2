@@ -1,16 +1,121 @@
 @import '_reset-style.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
+.page {
+  max-width: 1170px;
+  margin: 0 auto;
+  background-color: rgb(7, 2, 2);
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-family: 'Montserrat';
+
+  &__title {
+    font-size: 60px;
+    font-weight: 700;
+    padding-bottom: 40px;
+    color: white;
+  }
+
+  &__form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: space-between;
+  }
+  &__input,
+  &__input:active,
+  &__selector {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.631);
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+  }
+  &__input {
+    width: 50%;
+  }
+  &__selector {
+    width: 30%;
+  }
+
+  &__button {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 150px;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+}
+
 .movie-list,
 .pagination,
 .movie-details {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .movie-item {
+  width: 60%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 10px;
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .movie-item button {
   margin-left: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255);
+
+  color: rgb(255, 255, 255);
+}
+
+.movie-item span {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.movie-details h2 {
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.movie-details p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.movie-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.pagination button {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  margin-left: 20px;
+
+  border-radius: 8px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255);
+
+  color: rgb(255, 255, 255);
+}
+
+p strong {
+  font-weight: 600;
+  color: white;
 }

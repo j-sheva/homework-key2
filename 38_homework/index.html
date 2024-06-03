@@ -6,27 +6,29 @@
     <link rel="stylesheet" href="css/index.css" />
     <title>Movie Search</title>
   </head>
-  <body>
-    <h1>Movie Search</h1>
-    <form id="search-form">
+  <body class="page">
+    <h1 class="page__title">Movie Search</h1>
+    <form class="page__form" id="search-form">
       <input
+        class="page__input"
+        name="movie"
         type="text"
         id="search-query"
         placeholder="Enter movie name"
         required
       />
-      <select id="search-type">
+      <select class="page__selector" id="search-type">
         <option value="movie">Movie</option>
         <option value="series">Series</option>
         <option value="episode">Episode</option>
       </select>
-      <button type="submit">Search</button>
+      <button class="page__button" type="submit">Search</button>
     </form>
     <div id="results" class="movie-list"></div>
     <div id="pagination" class="pagination"></div>
     <div id="movie-details" class="movie-details"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
