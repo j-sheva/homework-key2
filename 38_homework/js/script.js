@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function searchMovies(query, type, page) {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${apiKey}`
+      `https://www.omdbapi.com/?s=${query}&type=${type}&page=${page}&apikey=${apiKey}`
     );
     const data = await response.json();
 
@@ -65,7 +65,7 @@ function setupPagination(totalResults, query, type, currentPage) {
 async function showDetails(imdbID) {
   try {
     const response = await fetch(
-      `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
+      `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
     );
     const data = await response.json();
 
