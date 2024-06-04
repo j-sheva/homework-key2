@@ -11,19 +11,29 @@
     position: relative;
     padding-right: 107px;
     padding-left: 107px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    @include media-query('mobile') {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
   }
 
   &__arrow {
     position: absolute;
     top: -10%;
+    @include media-query('mobile') {
+      top: 0;
+    }
     &_right {
       right: 40px;
+      @include media-query('mobile') {
+        right: 10px;
+      }
     }
     &_left {
       left: 40px;
+      @include media-query('mobile') {
+        left: 10px;
+      }
     }
   }
 

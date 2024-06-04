@@ -1,11 +1,19 @@
 .footer {
   background-color: $brown-dark;
   padding: 70px 130px 20px 130px;
+  @include media-query('mobile') {
+    padding: 70px 20px 20px 20px;
+  }
 
   &__container {
     padding-bottom: 54px;
     display: flex;
     justify-content: space-between;
+    @include media-query('mobile') {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
   }
 
   &__logo_white {
@@ -19,6 +27,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    @include media-query('mobile') {
+      align-items: center;
+    }
   }
 
   &__link {
@@ -44,6 +55,9 @@
     font-weight: 500;
     line-height: normal;
     padding-bottom: 48px;
+    @include media-query('mobile') {
+      text-align: center;
+    }
   }
 
   &__social {
@@ -60,6 +74,14 @@
 
     &:hover {
       fill: $tomato-light;
+    }
+  }
+
+  &__right {
+    @include media-query('mobile') {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 

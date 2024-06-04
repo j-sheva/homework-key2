@@ -48,6 +48,10 @@
   &:hover {
     fill: $tomato-light;
   }
+  @include media-query('mobile') {
+    width: 20px;
+    height: 37px;
+  }
 }
 
 .title {

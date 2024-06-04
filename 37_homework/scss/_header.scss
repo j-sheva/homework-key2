@@ -2,7 +2,9 @@
   padding-right: 62px;
   padding-left: 62px;
   background: $brown-light;
-  @include media-query('tablet') {
+  @include media-query('mobile') {
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   &__container {
@@ -15,16 +17,21 @@
     height: 34px;
     fill: $tomato;
 
-    @include media-query('tablet') {
+    @include media-query('mobile') {
       z-index: 1;
+      padding-top: 20px;
+      padding-bottom: 20px;
     }
   }
 
   &__icons {
     display: flex;
     gap: 30px;
-    width: 182px;
+    // width: 182px;
     justify-content: end;
+    @include media-query('mobile') {
+      gap: 10px;
+    }
   }
 
   &__profile {
@@ -43,8 +50,9 @@
   }
   &__list {
     display: flex;
+    justify-content: center;
 
-    @include media-query('tablet') {
+    @include media-query('mobile') {
       flex-direction: column;
       gap: 2.3125rem;
       justify-content: center;
@@ -74,13 +82,13 @@
       background-color: $tomato-light;
       color: $white;
     }
-    @include media-query('tablet') {
+    @include media-query('mobile') {
       font-size: 1.125rem;
     }
   }
 
   &__nav {
-    @include media-query('tablet') {
+    @include media-query('mobile') {
       display: none;
       position: fixed;
       flex-direction: column;
@@ -105,7 +113,7 @@
 
   &__burger {
     display: none;
-    @include media-query('tablet') {
+    @include media-query('mobile') {
       display: block;
       padding-right: 0.25rem;
       cursor: pointer;

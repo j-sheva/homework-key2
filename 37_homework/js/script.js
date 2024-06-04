@@ -15,6 +15,24 @@ $('.arrivals__items').slick({
   slidesToShow: 4.999,
   prevArrow: $('.arrivals__arrow_left'),
   nextArrow: $('.arrivals__arrow_right'),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+
+        infinite: true,
+      },
+    },
+  ],
 });
 
 $.getJSON('./json_file/arrivals.json', function (data) {
@@ -45,4 +63,21 @@ $('.partners__slider').slick({
   infinite: true,
   prevArrow: $('.partners__arrow_left'),
   nextArrow: $('.partners__arrow_right'),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 4.99,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2.99,
+
+        infinite: true,
+      },
+    },
+  ],
 });

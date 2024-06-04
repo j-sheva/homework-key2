@@ -10,6 +10,18 @@
     position: relative;
     padding-right: 107px;
     padding-left: 107px;
+    @include media-query('mobile') {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include media-query('mobile') {
+      height: 300px;
+      object-fit: contain;
+    }
   }
 
   &__arrow {
@@ -17,9 +29,15 @@
     top: 40%;
     &_left {
       left: 40px;
+      @include media-query('mobile') {
+        left: 10px;
+      }
     }
     &_right {
       right: 40px;
+      @include media-query('mobile') {
+        right: 10px;
+      }
     }
   }
 
