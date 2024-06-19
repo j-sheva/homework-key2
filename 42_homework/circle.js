@@ -28,7 +28,6 @@ class Circle {
   }
 }
 
-// Демонстрація роботи класу
 const circle = new Circle(5);
 console.log(`Радіус кола: ${circle.radius}`);
 console.log(`Діаметр кола: ${circle.diameter}`);
