@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="header">World Clock Dashboard</h1>
+    <p class="description">
+      Examples: Europe/London, Europe/Kiev, America/New_York, America/Toronto,
+      Asia/Tokyo, Asia/Seoul, Australia/Sydney, Australia/Melbourne,
+      Africa/Cairo.
+    </p>
+    <div class="input">
+      <input type="text" id="timezone" placeholder="Enter timezone" />
+      <button onclick="addClock()">Add Clock</button>
+    </div>
+    <div class="clock-container" id="clockContainer"></div>
+
+    <script src="user.js"></script>
+    <script src="clocks.js"></script>
+  </body>
+</html>
