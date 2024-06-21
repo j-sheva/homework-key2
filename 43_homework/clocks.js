@@ -18,7 +18,7 @@ class WorldClock {
 
   render() {
     this.clockElement.innerHTML = `
-    <p class="title">Часовий пояс: ${this.timezone}</p>
+    <p class="title">Time zone: ${this.timezone}</p>
    
     <button class="button button1" onclick="showDate(this)">Current date</button>
     <button class="button button2" onclick="showDateTime(this)">Current date&time</button>
@@ -39,7 +39,7 @@ function addClock() {
   if (timezone) {
     new WorldClock(timezone);
   } else {
-    alert('Будь ласка, введіть часовий пояс');
+    alert('Enter time zone please');
   }
 }
 
@@ -52,9 +52,9 @@ function showDate(button) {
     });
     clockElement.querySelector(
       '.time-output'
-    ).textContent = `Поточна дата: ${output}`;
+    ).textContent = `Current date: ${output}`;
   } catch (error) {
-    alert('Невірний часовий пояс');
+    alert('Incorrect time zone');
   }
 }
 
@@ -67,9 +67,9 @@ function showDateTime(button) {
     });
     clockElement.querySelector(
       '.time-output'
-    ).textContent = `Поточна дата та час: ${output}`;
+    ).textContent = `Current date and time: ${output}`;
   } catch (error) {
-    alert('Невірний часовий пояс');
+    alert('Incorrect time zone');
   }
 }
 
