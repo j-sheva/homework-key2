@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "header": "Lisbon",
+      "icon": "wi-day-sunny",
+      "text": "21°C"
+    },
+    {
+      "header": "Paris",
+      "icon": "wi-night-rain-mix",
+      "text": "11°C"
+    },
+    {
+      "header": "Belgrade",
+      "icon": "wi-day-cloudy",
+      "text": "15°C"
+    },
+    {
+      "header": "Venice",
+      "icon": "wi-day-cloudy-high",
+      "text": "21°C"
+    },
+    {
+      "header": "Tel-Avive",
+      "icon": "wi-hot",
+      "text": "32°C"
+    },
+    {
+      "header": "Cair",
+      "icon": "wi-day-sunny",
+      "text": "21°C"
+    },
+    {
+      "header": "New-York",
+      "icon": "wi-day-sleet-storm",
+      "text": "10°C"
+    },
+    {
+      "header": "New-Delhi",
+      "icon": "wi-hail",
+      "text": "17°C"
+    },
+    {
+      "header": "San-Francisco",
+      "icon": "wi-day-sunny-overcast",
+      "text": "15°C"
+    },
+    {
+      "header": "Tokyo",
+      "icon": "wi-night-clear",
+      "text": "8°C"
+    },
+    {
+      "header": "Sydney",
+      "icon": "wi-night-partly-cloudy",
+      "text": "25°C"
+    }
+  ]
+}
