@@ -86,7 +86,7 @@ h1 {
   margin: 0 auto;
   padding-bottom: 20px;
 }
-.input {
+#time-form {
   display: flex;
   justify-content: center;
   gap: 10px;
